@@ -20,6 +20,7 @@ function renderSpreadsheetData() {
 }
 
 function draw(data, tabletop) {
+  $('#wrap').toggleClass('dissapear');
   // draw chart
   console.log("Data:");
   console.log(data);

@@ -1,4 +1,8 @@
 $(function () {
+    closeNav(); //CIERRA EL DESPLEGABLE CUANDO SE SELECCIONA UNA SERIE
+    nominal = [0];
+    variacion = [0]; //LIMPIA LAS SERIES
+
     $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-ohlcv.json&callback=?', function (data) {
 
         // split the data set into ohlc and volume
@@ -27,6 +31,8 @@ $(function () {
                 data[i][2] // CAMBIAR 2 POR PARAMETRO 2N
             ]);
         }
+
+        //AGREGAR UN IF (NO HAY DATA VAR) {GRAFICAR CON AXIS SIMPLE}
 
 
         // create the chart
