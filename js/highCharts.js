@@ -9,7 +9,7 @@ function drawCharts(dataset, dataset_var, chartTitle, yAxis, yColumns){
 });
 
 
-  Highcharts.chart('chart1',{
+  /*Highcharts.chart('chart1',{
     series: dataset,
     yAxis: {
               title: {
@@ -61,6 +61,6 @@ function drawCharts(dataset, dataset_var, chartTitle, yAxis, yColumns){
               enabled: false,
               text: ''
             }
-  });
+  });*/
   drawUltimosDatos(dataset, dataset_var, chartTitle, yAxis, yColumns);
 };

@@ -33,7 +33,7 @@ $(function () {
 
 
         // create the chart
-        Highcharts.stockChart('container', {
+        Highcharts.stockChart('chart-container', {
             rangeSelector: {
 buttons: [ {
 	type: 'month',

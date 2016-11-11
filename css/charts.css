@@ -27,50 +27,50 @@ h1, h2, tspan, text, a {
   width: 100%;
   height: 50%;
 }
-#ultimosDatosTable > tbody {
+#ultimosDatosTable >  {
   width: 100%;
   //box-shadow: 0 0 30px -10px;
 }
-#ultimosDatosTable > tbody > tr {
+#ultimosDatosTable   > tr {
   background-color: #ddd;
   line-height: 20px;
 }
-#ultimosDatosTable > tbody > tr > td {
+#ultimosDatosTable   > tr > td {
 
 }
-#ultimosDatosTable > tbody > tr:first-child {
+#ultimosDatosTable   > tr:first-child {
   font-weight: bold;
   font-size: 18px;
   line-height: 32px;
   background-color: #7cb5ec !important;
 }
 
-#ultimosDatosTable > tbody > tr:nth-child(even) {
+#ultimosDatosTable   > tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.2);
 }
-#ultimosDatosTable > tbody > tr > td:last-child {
+#ultimosDatosTable   > tr > td:last-child {
   font-style: italic;
   background-color: rgba(255, 255, 255, 0.4);
   max-width: 100px;
 }
-#ultimosDatosTable > tbody {
+#ultimosDatosTable   {
   width: 100%;
 }
-#ultimosDatosTable > tbody > tr {
+#ultimosDatosTable   > tr {
   background-color: #ddd;
   line-height: 20px;
 }
-#ultimosDatosTable > tbody > tr > td {
+#ultimosDatosTable   > tr > td {
 
 }
-#ultimosDatosTable > tbody > tr:first-child {
+#ultimosDatosTable   > tr:first-child {
   font-weight: bold;
   font-size: 18px;
   line-height: 32px;
   background-color: #7cb5ec !important;
 }
 
-#ultimosDatosTable > tbody > tr:nth-child(even) {
+#ultimosDatosTable   > tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.2);
 }
 #ultimosDatosTable > tbody > tr > td:last-child {
@@ -110,16 +110,17 @@ h1, h2, tspan, text, a {
   font-size: 25px !important;
   font-weight: bold;
 }
+.cd-main-content{
+  padding-top: 100px;
+}
+.cd-nav{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
 #header{
-  position: fixed;
-  height: 100px;
-  top: 0;
-  left: 0;
-  width: 100%;
   background: #0397C8;
-  z-index: 1;
   box-shadow: 0 0 20px -5px #000;
-  display: inline-block;
   user-select: none !important;
 }
 .logoMinisterio {

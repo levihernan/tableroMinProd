@@ -140,7 +140,7 @@ Main components
 
 .cd-main-content {
   background: #e2e3df;
-  min-height: 100vh;
+  height: 100vh;
   z-index: 2;
 }
 
@@ -148,6 +148,11 @@ Main components
   height: 50px;
   background: #ffffff;
   z-index: 3;
+	position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
 }
 .nav-is-fixed .cd-main-header {
   /* add .nav-is-fixed class to body if you want a fixed navigation on > 1170px */
@@ -627,7 +632,7 @@ Main components
     height: 80px;
     line-height: 80px;
     padding: 0 10px;
-    color: #2e3233;
+    color: #fff;
     overflow: visible;
     border-bottom: none;
     -webkit-transition: color 0.3s, box-shadow 0.3s;
@@ -635,11 +640,11 @@ Main components
     transition: color 0.3s, box-shadow 0.3s;
   }
   .cd-primary-nav > li > a:hover {
-    color: #69aa6f;
+    color: #53c0e1;
   }
   .cd-primary-nav > li > a.selected {
-    color: #69aa6f;
-    box-shadow: inset 0 -2px 0 #69aa6f;
+    color: #53c0e1;
+    //box-shadow: inset 0 -2px 0 #69aa6f;
   }
   .cd-primary-nav .go-back, .cd-primary-nav .see-all {
     display: none;
@@ -730,7 +735,7 @@ Main components
   }
   .cd-primary-nav .cd-secondary-nav > li > a {
     /* secondary nav title */
-    color: #69aa6f;
+    color: #2db3dc;
     font-weight: bold;
     font-size: 1.6rem;
     margin-bottom: .6em;

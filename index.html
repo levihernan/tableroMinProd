@@ -5,7 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="css/dropdown.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/charts.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/jsoma/tabletop/master/src/tabletop.js"></script>
+	<script type="text/javascript" src="js/highCharts.js"></script>
+	<script type="text/javascript" src="js/ultimosDatos.js"></script>
+	<script type="text/javascript" src="js/buildSeries.js"></script>
+	<script type="text/javascript" src="js/extractData.js"></script>
+	<script type="text/javascript" src="js/ultimosDatos.js"></script>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://code.highcharts.com/stock/highstock.js"></script>
@@ -15,8 +25,11 @@
 	<title>Tablero de la Economia Real</title>
 </head>
 <body>
-	<header class="cd-main-header">
-		<a class="cd-logo" href="#0"><img src="img/cd-logo.svg" alt="Logo"></a>
+	<header id="header" class="cd-main-header">
+		<img src="img/logoMinisterio.png" class="logoMinisterio" draggable="false" />
+		<div class="tituloTablero">
+			<h2>Tablero de </h2><h1>Control Industrial</h1>
+		</div>
 
 		<ul class="cd-header-buttons">
 			<li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a></li>
@@ -25,8 +38,18 @@
 
 	<main class="cd-main-content">
 		<!-- your content here -->
-    <div id="container" style="height: 400px; min-width: 310px"></div>
-
+		<div id="mainContainer">
+			<div id="chartContainer">
+				<div id="chart-container" class="chart" ></div>
+			</div>
+			<div id="ultimosDatosContainer">
+				<h1>Últimos datos</h1>
+				<h2 id="ultimosDatosSubtitle"></h2>
+				<h3 id="ultimosDatosUnidades"></h3>
+				<table id="ultimosDatosTable">
+				</table>
+			</div>
+		</div>
 	</main>
 
 
