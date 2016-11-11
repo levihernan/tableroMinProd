@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu');
+
+h1, h2, tspan, text, a {
+  font-family: Ubuntu;
+}
+#mainContainer {
+    margin: auto;
+    text-align: center;
+}
+#chartContainer {
+    width: 40% !important;
+    margin: 0 10px;
+    box-shadow: 0 0 20px -5px #000;
+    display: inline-block;
+}
+#ultimosDatosContainer {
+  width: 30%;
+  height: 600px;
+  margin: 0 10px;
+  display: inline-block;
+  background-color: #fff;
+  vertical-align: top;
+  padding: 20px;
+}
+#ultimosDatosTable{
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+#ultimosDatosTable > tbody {
+  width: 100%;
+  //box-shadow: 0 0 30px -10px;
+}
+#ultimosDatosTable > tbody > tr {
+  background-color: #ddd;
+  line-height: 20px;
+}
+#ultimosDatosTable > tbody > tr > td {
+
+}
+#ultimosDatosTable > tbody > tr:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  background-color: #7cb5ec !important;
+}
+
+#ultimosDatosTable > tbody > tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#ultimosDatosTable > tbody > tr > td:last-child {
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.4);
+  max-width: 100px;
+}
+#ultimosDatosTable > tbody {
+  width: 100%;
+}
+#ultimosDatosTable > tbody > tr {
+  background-color: #ddd;
+  line-height: 20px;
+}
+#ultimosDatosTable > tbody > tr > td {
+
+}
+#ultimosDatosTable > tbody > tr:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  background-color: #7cb5ec !important;
+}
+
+#ultimosDatosTable > tbody > tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#ultimosDatosTable > tbody > tr > td:last-child {
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.4);
+  max-width: 100px;
+}
+
+#pantalla {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 2;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    //display: none;
+    transition: ease all 0.5s;
+    pointer-events: none;
+}
+.cd-main-content{
+  background-image: url(../img/background.png);
+}
+.pantalla-visible {
+    //display: block !important;
+    opacity: 0.8 !important;
+}
+.chart {
+  height: 300px;
+  min-width: 310px;
+  width: 100%;
+  background-color: #fafafa;
+}
+.highcharts-title {
+  font-size: 25px !important;
+  font-weight: bold;
+}
+#header{
+  position: fixed;
+  height: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0397C8;
+  z-index: 1;
+  box-shadow: 0 0 20px -5px #000;
+  display: inline-block;
+  user-select: none !important;
+}
+.logoMinisterio {
+  height: 100%;
+  padding: 20px;
+  display: inline-block;
+  background: #fff;
+}
+.tituloTablero {
+  display: inline-block;
+  color: #fff;
+  vertical-align: top;
+  padding: 20px;
+}
+.tituloTablero > h1,h2{
+  margin: 0;
+}
