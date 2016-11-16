@@ -5,7 +5,7 @@ function drawCharts(N){
     dataLength = dataSerie.data.length+5; //Porque dataSerie ya tiene el slice
 
     buildSeries(N);
-    ultimosDatos(N);
+    drawUltimosDatos(N);
 
       Highcharts.setOptions({
         lang: {
