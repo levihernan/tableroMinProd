@@ -2,6 +2,7 @@ var ultimosDatos = [0];
 var ultimosDatosArray = [0];
 var tituloDatos = [0];
 var ultimosDatos_var = [0];
+var hayDatosVar = false;
 var month = new Array(12);
 month[0] = "Ene";
 month[1] = "Feb";
@@ -16,7 +17,6 @@ month[9] = "Oct";
 month[10] = "Nov";
 month[11] = "Dic";
 
-//function drawUltimosDatos(dataset, dataset_var, chartTitle, yAxis, yColumns){
 function drawUltimosDatos(N){
 $('#ultimosDatosTable').empty();
 //Empty ultimosDatosTable
@@ -24,25 +24,39 @@ ultimosDatos.length = 0;
 ultimosDatosArray.length = 0;
 tituloDatos.length = 0;
 ultimosDatos_var.length = 0;
+hayDatosVar = false;
 dataset.forEach(cropArrays);
 ultimosDatos = ultimosDatosArray[2*N-1]
 ultimosDatos_var = dataset[2*N].slice(-12);
 
+for (row = 0; row < 12; row++) {
+  if (ultimosDatos_var[row] > 0){
+    hayDatosVar = true;
+  }
+};
+
+
 //Set titulo + unidades
-$('#ultimosDatosSubtitle').html(); //CHART TITLE
-$('#ultimosDatosUnidades').html(); //YAXIS
+$('#ultimosDatosSubtitle').html(dataset[2*N-1][4]); //CHART TITLE
+$('#ultimosDatosUnidades').html(dataset[2*N-1][0]); //YAXIS
 
 rowTitulos = "<tr><td>Período</td>";
-tituloDatos.forEach(sumarCols);
-rowTitulos += "<td>"+dataset[N]+"</td></tr>" //TITULOS
+//AGREGAR IF
+rowTitulos += "<td>"+dataset[2*N-1][4]+"</td>";
+if( hayDatosVar ) {rowTitulos += "<td>Variación anual [%]</td>"};
+rowTitulos += "</tr>"; //TITULOS
 $('#ultimosDatosTable').append( rowTitulos );
 //Carga la fila de titulos y la despliega en la table
 
 for (row = 0; row < 12; row++) {
-    var periodo = new Date(ultimosDatos[0][row][0]);
-    rowDatos = "<tr><td>"+month[periodo.getUTCMonth()]+"-"+periodo.getUTCFullYear()+"</td>";
-    ultimosDatos.forEach(sumarDatos);
-    rowDatos += "<td>"+ ultimosDatos_var[row][1] + "</td></tr>";
+    var periodo = dataset[0].slice(-12)[row];
+//    var periodo = new Date(dataset[0].slice(-12)[row]);
+//    rowDatos = "<tr><td>"+month[periodo.getUTCMonth()]+"-"+periodo.getUTCFullYear()+"</td>";
+    rowDatos = "<tr><td>"+periodo+"</td>";
+    rowDatos += "<td>"+ ultimosDatos[row] + "</td>";
+    if( hayDatosVar ) {rowDatos += "<td>"+ ultimosDatos_var[row] + "</td>"};
+
+    rowDatos += "</tr>";
     $('#ultimosDatosTable').append( rowDatos );
 };
 }
@@ -50,10 +64,4 @@ for (row = 0; row < 12; row++) {
 function cropArrays(value,index,obj){
     ultimosDatosArray[index] = value.slice(-12);
     tituloDatos[index] = value.name;
-};
-function sumarCols(value,index,obj){
-    rowTitulos += "<td>"+value+"</td>";
-};
-function sumarDatos(value,index,obj){
-    rowDatos += "<td>"+value[row][1]+"</td>"
 };
