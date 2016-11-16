@@ -38,8 +38,6 @@ function draw(data, tabletop) {
   // render the table(s)
   data1 = data;
   dataset = transpose(data);
-<<<<<<< HEAD
-
 
   // for(var i = 0;i<data.length;i++){
   //   Object.keys(data[i]).forEach(function(key,index) {
@@ -76,8 +74,7 @@ function draw(data, tabletop) {
   //   });
   // }
 
-=======
-  
+
   var fixTimeSeries = function(){
     // for(var i = 0;i<data.length;i++){
     //   Object.keys(data[i]).forEach(function(key,index) {
@@ -114,8 +111,7 @@ function draw(data, tabletop) {
     //   });
     // }
   }
-  
->>>>>>> origin/master
+
   buildSeries();
   //drawCharts(dataBalance, dataBalance_var, 'Exportaciones', 'Miles de USD', 'Variación anual [%]');
   drawUltimosDatos(1);
