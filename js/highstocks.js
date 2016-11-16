@@ -1,7 +1,8 @@
 $(function () {
+  /*
     closeNav(); //CIERRA EL DESPLEGABLE CUANDO SE SELECCIONA UNA SERIE
-    nominal = [0];
-    variacion = [0]; //LIMPIA LAS SERIES
+    nominal = [];
+    variacion = []; //LIMPIA LAS SERIES
 
     $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-ohlcv.json&callback=?', function (data) {
       Highcharts.setOptions({
@@ -185,5 +186,5 @@ $(function () {
             }]
         });
         }
-    });
+    });*/
 });

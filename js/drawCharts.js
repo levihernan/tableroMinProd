@@ -32,15 +32,15 @@ function drawCharts(N){
           dateUTC = Date.UTC(tempDate[2], tempDate[1]-1, tempDate[0]); //MES -1 0=ENERO
           nominal.push([dateUTC,
             parseFloat(dataset[2*N-1][i])]);
-          console.log(nominal);
           variacion.push([dateUTC,
             parseFloat(dataset[2*N][i])]);
+          console.log(nominal);
         };
 
 
         //AGREGAR UN IF (NO HAY DATA VAR) {GRAFICAR CON AXIS SIMPLE}
 
-        if( variacion[1][1] = 0 ){
+        if( variacion[1][1] == 0 ){
                 Highcharts.stockChart('chart-container', {
                       rangeSelector: {
                         buttons: [
