@@ -36,7 +36,7 @@ function draw(data, tabletop) {
   console.log(data);
   // render the table(s)
   dataset = transpose(data);
-  
+
 
   // for(var i = 0;i<data.length;i++){
   //   Object.keys(data[i]).forEach(function(key,index) {
@@ -75,7 +75,7 @@ function draw(data, tabletop) {
 
   buildSeries();
   //drawCharts(dataBalance, dataBalance_var, 'Exportaciones', 'Miles de USD', 'Variación anual [%]');
-  drawUltimosDatos(dataExportaciones, dataExportaciones_var);
+  drawUltimosDatos(1);
 
 }
 
