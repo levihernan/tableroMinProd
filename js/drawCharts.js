@@ -29,7 +29,7 @@ function drawCharts(N){
 
         for (i=5 ; i < dataLength; i += 1) {
           tempDate = dataset[0][i].split("/");
-          dateUTC = Date.UTC(tempDate[2], tempDate[1], tempDate[0]);
+          dateUTC = Date.UTC(tempDate[2], tempDate[1]-1, tempDate[0]); //MES -1 0=ENERO
           nominal.push([dateUTC,
             parseFloat(dataset[2*N-1][i])]);
           console.log(nominal);
