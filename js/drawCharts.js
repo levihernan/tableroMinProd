@@ -34,13 +34,11 @@ function drawCharts(N){
             parseFloat(dataset[2*N-1][i])]);
           variacion.push([dateUTC,
             parseFloat(dataset[2*N][i])]);
-          console.log(nominal);
         };
 
 
-        //AGREGAR UN IF (NO HAY DATA VAR) {GRAFICAR CON AXIS SIMPLE}
 
-        if( variacion[1][1] == 0 ){
+        if( !hayDatosVar ){ //SI NO HAY DATOS_VAR
                 Highcharts.stockChart('chart-container', {
                       rangeSelector: {
                         buttons: [
@@ -72,11 +70,11 @@ function drawCharts(N){
                       },
         						credits: {
                       enabled: true,
-                      text: "INDEC",  //PONER FUETE
+                      text: dataset[N][3],  //PONER FUENTE
                       href: '',
                     },
                     title: {
-                        text: 'EXPORTACIONES' //PONER TITULO
+                        text: dataset[N][4] //PONER TITULO
                     },
 
                     yAxis: [{
@@ -87,14 +85,14 @@ function drawCharts(N){
                            x: 2
                        },
                        title: {
-                           text: 'SERIE' //PONER NOMBRE DE SERIE
+                           text: dataset[N][0] //PONER NOMBRE DE SERIE
                        },
                        height: '100%'
                    }],
 
                     series: [{
                         type: 'line',
-                        name: 'AAPL',
+                        name: dataset[N][4],
                         data: nominal,
                         dataGrouping: {
                             units: groupingUnits
@@ -134,11 +132,11 @@ function drawCharts(N){
               },
 						credits: {
               enabled: true,
-              text: "INDEC",  //PONER FUETE
+              text: dataset[N][3],  //PONER FUETE
               href: '',
             },
             title: {
-                text: 'EXPORTACIONES' //PONER TITULO
+                text: dataset[N][4] //PONER TITULO
             },
 
             yAxis: [{
@@ -149,7 +147,7 @@ function drawCharts(N){
                    x: 2
                },
                title: {
-                   text: 'SERIE' //PONER NOMBRE DE SERIE
+                   text: dataset[N][0] //PONER NOMBRE DE SERIE
                },
                height: '60%'
            },{
@@ -160,7 +158,7 @@ function drawCharts(N){
                   x: 2
               },
               title: {
-                  text: 'VARIACION ANUAL [%]' //CAMBIA?
+                  text: 'Variación anual' //CAMBIA?
               },
               top: '65%',
               height: '35%',
@@ -169,14 +167,14 @@ function drawCharts(N){
 
             series: [{
                 type: 'line',
-                name: 'AAPL',
+                name: dataset[N][4],
                 data: nominal,
                 dataGrouping: {
                     units: groupingUnits
                 }
             }, {
                 type: 'column',
-                name: 'Volume',
+                name: 'Variación anual',
                 data: variacion,
                 yAxis: 1,
                 dataGrouping: {
