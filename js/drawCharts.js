@@ -70,11 +70,11 @@ function drawCharts(N){
                       },
         						credits: {
                       enabled: true,
-                      text: dataset[N][3],  //PONER FUENTE
+                      text: dataset[2*N-1][3],  //PONER FUENTE
                       href: '',
                     },
                     title: {
-                        text: dataset[N][4] //PONER TITULO
+                        text: dataset[2*N-1][4] //PONER TITULO
                     },
 
                     yAxis: [{
@@ -85,14 +85,14 @@ function drawCharts(N){
                            x: 2
                        },
                        title: {
-                           text: dataset[N][0] //PONER NOMBRE DE SERIE
+                           text: dataset[2*N-1][0] //PONER NOMBRE DE SERIE
                        },
                        height: '100%'
                    }],
 
                     series: [{
                         type: 'line',
-                        name: dataset[N][4],
+                        name: dataset[2*N-1][4],
                         data: nominal,
                         dataGrouping: {
                             units: groupingUnits
@@ -132,11 +132,11 @@ function drawCharts(N){
               },
 						credits: {
               enabled: true,
-              text: dataset[N][3],  //PONER FUETE
+              text: dataset[2*N-1][3],  //PONER FUETE
               href: '',
             },
             title: {
-                text: dataset[N][4] //PONER TITULO
+                text: dataset[2*N-1][4] //PONER TITULO
             },
 
             yAxis: [{
@@ -147,7 +147,7 @@ function drawCharts(N){
                    x: 2
                },
                title: {
-                   text: dataset[N][0] //PONER NOMBRE DE SERIE
+                   text: dataset[2*N-1][0] //PONER NOMBRE DE SERIE
                },
                height: '60%'
            },{
@@ -167,7 +167,7 @@ function drawCharts(N){
 
             series: [{
                 type: 'line',
-                name: dataset[N][4],
+                name: dataset[2*N-1][4],
                 data: nominal,
                 dataGrouping: {
                     units: groupingUnits
