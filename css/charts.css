@@ -8,17 +8,26 @@ h1, h2, tspan, text, a {
     text-align: center;
     height: 600px
 }
+
+#seriesContainer{
+  display: none;
+}
+
+#tableroContainer {
+  display: block;
+}
+
 #chartContainer {
-    width: 40% !important;
-    margin: 0 10px;
+   /* width: 40% !important;*/
+   /* margin: 0 10px;*/
     box-shadow: 0 0 20px -5px #000;
     display: inline-block;
     height: 100%
 }
 #ultimosDatosContainer {
-  width: 30%;
+  /*width: 30%;*/
   height: 600px;
-  margin: 0 10px;
+  /*margin: 0 10px;*/
   display: inline-block;
   background-color: #fff;
   vertical-align: top;
@@ -140,3 +149,4 @@ h1, h2, tspan, text, a {
 .tituloTablero > h1,h2{
   margin: 0;
 }
+

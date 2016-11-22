@@ -1,0 +1,68 @@
+#tableroContainer tr{
+	width:800px;
+}
+#tableroContainer td{
+
+	border:1px solid white;
+	border-collapse: collapse;
+	padding:10px 20px 10px 20px;
+	text-align:center;
+	color:white;
+	font-family: Ubuntu;
+	font-size:23px;
+}
+
+#tableroContainer thead td{
+	background-color: #017aa2;
+}
+
+#tableroContainer tbody td{
+	background-color: #0397C8;
+}
+
+.tablero{
+	width:90%;
+	margin:0 auto;
+}
+
+.innerTable{
+	padding:0px;
+}
+.innerTable td{
+
+	border:1px solid !important;
+	border-collapse: collapse;
+	padding:10px 20px 10px 20px;
+	text-align:center;
+	background-color: white !important;
+	color:black !important;
+	font-family: Ubuntu;
+	font-size:22px;
+}
+/*indicador*/
+.innerTable tr td:first-child{
+	font-weight: bold;
+	width:350px;
+
+}
+/*unidad*/
+.innerTable tr td:nth-child(2){
+	
+	width:100px;
+
+}/*UDD: periodo*/
+.innerTable tr td:nth-child(2){
+	
+	width:100px;
+
+}/*UDD: periodo*/
+.innerTable tr td:nth-child(2){
+	
+	width:100px;
+
+}
+.innerTable tr td:nth-child(2){
+	
+	width:100px;
+
+}

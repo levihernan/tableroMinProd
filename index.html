@@ -4,18 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/dropdown.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="css/charts.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<link rel="stylesheet" href="css/loader.css">
+	<link rel="stylesheet" type="text/css" href="css/table-styles.css">
+
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script src="https://cdn.rawgit.com/jsoma/tabletop/master/src/tabletop.js"></script>
+	<script src="https://cdn.rawgit.com/jsoma/tabletop/master/src/tabletop.js"></script><!-- Tabletop -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js"></script><!-- D3 -->
 
+	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/ultimosDatos.js"></script>
 	<script type="text/javascript" src="js/buildSeries.js"></script>
 	<script type="text/javascript" src="js/drawCharts.js"></script>
 	<script type="text/javascript" src="js/extractData.js"></script>
+	<script type="text/javascript" src="js/extractTablero.js"></script>
 	<script type="text/javascript" src="js/ultimosDatos.js"></script>
 
 
@@ -46,17 +52,54 @@
 	<main class="cd-main-content">
 		<!-- your content here -->
 		<div id="mainContainer">
-			<div id="chartContainer">
-				<div id="chart-container" class="chart" ></div>
+			<div class="row" id="seriesContainer" style="height:100%">				
+				<div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-1" id="chartContainer">
+					<div id="chart-container" class="chart" ></div>
+				</div>
+				<div  class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0" id="ultimosDatosContainer">
+					<h1>Últimos datos</h1>
+					<h2 id="ultimosDatosSubtitle"></h2>
+					<h3 id="ultimosDatosUnidades"></h3>
+					<table id="ultimosDatosTable">
+					</table>
+				</div>
 			</div>
-			<div id="ultimosDatosContainer">
-				<h1>Últimos datos</h1>
-				<h2 id="ultimosDatosSubtitle"></h2>
-				<h3 id="ultimosDatosUnidades"></h3>
-				<table id="ultimosDatosTable">
-				</table>
-			</div>
+
 			<div id="tableroContainer">
+					<table id="" class="tablero">
+						<thead>
+							<tr>
+								<td rowspan="2" style="width:350px">Indicador</td>
+								<td rowspan="2" style="width:100px">Unidad</td>
+								<td colspan="3">Último dato disponible</td>
+								<td colspan="3">Acumulado</td>
+							</tr>
+							<tr>
+								<td>Período</td>
+								<td>Valor</td>
+								<td>Variación i.a.</td>
+								<td>Período</td>
+								<td>2016</td>
+								<td>Var. 16/15</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td colspan="8">Sector externo</td></tr>
+							<tr><td id="sectorExterno" class="innerTable" colspan="8"></td></tr>
+							<tr><td colspan="8">Inversión</td></tr>
+							<tr><td id="inversion" class="innerTable" colspan="8"></td></tr>
+							<tr><td colspan="8">Consumo</td></tr>
+							<tr><td id="consumo" class="innerTable" colspan="8"></td></tr>
+							<tr><td colspan="8">Precios</td></tr>
+							<tr><td id="precios" class="innerTable" colspan="8"></td></tr>
+							<tr><td colspan="8">Sector real</td></tr>
+							<tr><td id="sectorReal" class="innerTable" colspan="8"></td></tr>
+							<tr><td colspan="8">Monetario</td></tr>
+							<tr><td id="monetario" class="innerTable" colspan="8"></td></tr>
+							<tr><td colspan="8">Fiscal</td></tr>
+							<tr><td id="fiscal" class="innerTable" colspan="8"></td></tr>
+						</tbody>
+					</table>
 			</div>
 		</div>
 	</main>
@@ -64,7 +107,7 @@
 
 	<nav class="cd-nav">
 		<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
-			<li><a href="">Tablero</a></li>
+			<li><a href="" onclick="toggleTablero();">Tablero</a></li>
 			<li class="has-children">
 				<a href="">Series</a>
 
@@ -74,81 +117,81 @@
 						<a href="#">Sector Externo</a>
 						<ul class="is-hidden">
 							<li class="go-back"><a href="#0">Series</a></li>
-							<li><a href="#" onclick="drawCharts(1);">Exportaciones</a></li>
-							<li><a href="#" onclick="drawCharts(2);">Exportaciones var.</a></li>
-							<li><a href="#" onclick="drawCharts(3);">Importaciones</a></li>
-							<li><a href="#" onclick="drawCharts(4);">Importaciones var.</a></li>
-							<li><a href="#" onclick="drawCharts(5);">Balanza Comercial</a></li>
-							<li><a href="#" onclick="drawCharts(6);">Precio de la Soja</a></li>
+							<li><a href="#" onclick="drawCharts(1);toggleSeries();">Exportaciones</a></li>
+							<li><a href="#" onclick="drawCharts(2);toggleSeries();">Exportaciones var.</a></li>
+							<li><a href="#" onclick="drawCharts(3);toggleSeries();">Importaciones</a></li>
+							<li><a href="#" onclick="drawCharts(4);toggleSeries();">Importaciones var.</a></li>
+							<li><a href="#" onclick="drawCharts(5);toggleSeries();">Balanza Comercial</a></li>
+							<li><a href="#" onclick="drawCharts(6);toggleSeries();">Precio de la Soja</a></li>
 						</ul>
 					</li>
 					<li class="has-children">
 						<a href="#">Inversión</a>
 						<ul class="is-hidden">
 							<li class="go-back"><a href="#0">Series</a></li>
-							<li><a href="#" onclick="drawCharts(7);">IED</a></li>
-							<li><a href="#" onclick="drawCharts(8);">Importación de Bs. de Capital</a></li>
-							<li><a href="#" onclick="drawCharts(9);">Cronstrucción</a></li>
-							<li><a href="#" onclick="drawCharts(10);">Índice Construya</a></li>
-							<li><a href="#" onclick="drawCharts(11);">Inversión</a></li>
-							<li><a href="#" onclick="drawCharts(12);">IBIM</a></li>
+							<li><a href="#" onclick="drawCharts(7);toggleSeries();">IED</a></li>
+							<li><a href="#" onclick="drawCharts(8);toggleSeries();">Importación de Bs. de Capital</a></li>
+							<li><a href="#" onclick="drawCharts(9);toggleSeries();">Cronstrucción</a></li>
+							<li><a href="#" onclick="drawCharts(10);toggleSeries();">Índice Construya</a></li>
+							<li><a href="#" onclick="drawCharts(11);toggleSeries();">Inversión</a></li>
+							<li><a href="#" onclick="drawCharts(12);toggleSeries();">IBIM</a></li>
 						</ul>
 					</li>
 					<li class="has-children">
 						<a href="#">Consumo</a>
 						<ul class="is-hidden">
 							<li class="go-back"><a href="#0">Series</a></li>
-							<li><a href="#" onclick="drawCharts(13);">Ventas en supermercados</a></li>
-							<li><a href="#" onclick="drawCharts(14);">Ventas en centros de compras</a></li>
-							<li><a href="#" onclick="drawCharts(15);">Patentamentos</a></li>
-							<li><a href="#" onclick="drawCharts(16);">Recaudación de IVA</a></li>
-							<li><a href="#" onclick="drawCharts(17);">Tasa de desempleo</a></li>
+							<li><a href="#" onclick="drawCharts(13);toggleSeries();">Ventas en supermercados</a></li>
+							<li><a href="#" onclick="drawCharts(14);toggleSeries();">Ventas en centros de compras</a></li>
+							<li><a href="#" onclick="drawCharts(15);toggleSeries();">Patentamentos</a></li>
+							<li><a href="#" onclick="drawCharts(16);toggleSeries();">Recaudación de IVA</a></li>
+							<li><a href="#" onclick="drawCharts(17);toggleSeries();">Tasa de desempleo</a></li>
 						</ul>
 					</li>
 					<li class="has-children">
 						<a href="#">Sector Real</a>
 						<ul class="is-hidden">
 							<li class="go-back"><a href="#0">Series</a></li>
-							<li><a href="#" onclick="drawCharts(18);">Estimador Mensual de Actividad</a></li>
-							<li><a href="#" onclick="drawCharts(19);">Índice general de actividad</a></li>
-							<li><a href="#" onclick="drawCharts(20);">Producción Industrial</a></li>
-							<li><a href="#" onclick="drawCharts(21);">Producción Automotriz</a></li>
-							<li><a href="#" onclick="drawCharts(22);">Despacho de cemento</a></li>
-							<li><a href="#" onclick="drawCharts(23);">Producción de Acero</a></li>
-							<li><a href="#" onclick="drawCharts(24);">Producción de gas</a></li>
-							<li><a href="#" onclick="drawCharts(25);">Faena de carne vacuna</a></li>
-							<li><a href="#" onclick="drawCharts(26);">Producción Industrial Brasil</a></li>
+							<li><a href="#" onclick="drawCharts(18);toggleSeries();">Estimador Mensual de Actividad</a></li>
+							<li><a href="#" onclick="drawCharts(19);toggleSeries();">Índice general de actividad</a></li>
+							<li><a href="#" onclick="drawCharts(20);toggleSeries();">Producción Industrial</a></li>
+							<li><a href="#" onclick="drawCharts(21);toggleSeries();">Producción Automotriz</a></li>
+							<li><a href="#" onclick="drawCharts(22);toggleSeries();">Despacho de cemento</a></li>
+							<li><a href="#" onclick="drawCharts(23);toggleSeries();">Producción de Acero</a></li>
+							<li><a href="#" onclick="drawCharts(24);toggleSeries();">Producción de gas</a></li>
+							<li><a href="#" onclick="drawCharts(25);toggleSeries();">Faena de carne vacuna</a></li>
+							<li><a href="#" onclick="drawCharts(26);toggleSeries();">Producción Industrial Brasil</a></li>
 						</ul>
 					</li>
 					<li class="has-children">
 						<a href="#">Precios</a>
 						<ul class="is-hidden">
 							<li class="go-back"><a href="#0">Series</a></li>
-							<li><a href="#" onclick="drawCharts(27);">Salario Real - Privado Registrado</a></li>
-							<li><a href="#" onclick="drawCharts(28);">Precios IPC</a></li>
-							<li><a href="#" onclick="drawCharts(29);">Tipo de cambio oficial</a></li>
-							<li><a href="#" onclick="drawCharts(30);">Tipo de cambio real multilateral</a></li>
-							<li><a href="#" onclick="drawCharts(31);">Tipo de cambio real bilateral (Brasil)</a></li>
-							<li><a href="#" onclick="drawCharts(32);">Tipo de cambio real bilateral (EEUU)</a></li>
+							<li><a href="#" onclick="drawCharts(27);toggleSeries();">Salario Real - Privado Registrado</a></li>
+							<li><a href="#" onclick="drawCharts(28);toggleSeries();">Precios IPC</a></li>
+							<li><a href="#" onclick="drawCharts(29);toggleSeries();">Tipo de cambio oficial</a></li>
+							<li><a href="#" onclick="drawCharts(30);toggleSeries();">Tipo de cambio real multilateral</a></li>
+							<li><a href="#" onclick="drawCharts(31);toggleSeries();">Tipo de cambio real bilateral (Brasil)</a></li>
+							<li><a href="#" onclick="drawCharts(32);toggleSeries();">Tipo de cambio real bilateral (EEUU)</a></li>
 						</ul>
 					</li>
 					<li class="has-children">
 						<a href="#">Monetario</a>
 						<ul class="is-hidden">
 							<li class="go-back"><a href="#0">Series</a></li>
-							<li><a href="#" onclick="drawCharts(33);">Costos Fin. Empresas</a></li>
-							<li><a href="#" onclick="drawCharts(34);">Base monetaria</a></li>
-							<li><a href="#" onclick="drawCharts(35);">Reservas</a></li>
+							<li><a href="#" onclick="drawCharts(33);toggleSeries();">Costos Fin. Empresas</a></li>
+							<li><a href="#" onclick="drawCharts(34);toggleSeries();">Base monetaria</a></li>
+							<li><a href="#" onclick="drawCharts(35);toggleSeries();">Reservas</a></li>
 						</ul>
 					</li>
 					<li class="has-children">
 						<a href="#">Fiscal</a>
 						<ul class="is-hidden">
 							<li class="go-back"><a href="#0">Series</a></li>
-							<li><a href="#" onclick="drawCharts(36);">Gasto primario</a></li>
-							<li><a href="#" onclick="drawCharts(37);">Ingresos tributarios</a></li>
-							<li><a href="#" onclick="drawCharts(38);">Resultado primario</a></li>
-							<li><a href="#" onclick="drawCharts(39);">Resultado financiero</a></li>
+							<li><a href="#" onclick="drawCharts(36);toggleSeries();">Gasto primario</a></li>
+							<li><a href="#" onclick="drawCharts(37);toggleSeries();">Ingresos tributarios</a></li>
+							<li><a href="#" onclick="drawCharts(38);toggleSeries();">Resultado primario</a></li>
+							<li><a href="#" onclick="drawCharts(39);toggleSeries();">Resultado financiero</a></li>
 						</ul>
 					</li>
 
