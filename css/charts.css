@@ -6,7 +6,7 @@ h1, h2, tspan, text, a {
 #mainContainer {
     margin: auto;
     text-align: center;
-    height: 600px
+    //height: 600px
 }
 
 #seriesContainer{
@@ -105,7 +105,8 @@ h1, h2, tspan, text, a {
     pointer-events: none;
 }
 .cd-main-content{
-  background-image: url(../img/background.png);
+  //background-image: url(../img/background.png);
+  background: #fff;
 }
 .pantalla-visible {
     //display: block !important;
@@ -122,7 +123,7 @@ h1, h2, tspan, text, a {
   font-weight: bold;
 }
 .cd-main-content{
-  padding-top: 100px;
+  padding: 70px 0;
 }
 .cd-nav{
     display: inline-block;
@@ -130,23 +131,35 @@ h1, h2, tspan, text, a {
     right: 0;
 }
 #header{
-  background: #0397C8;
-  box-shadow: 0 0 20px -5px #000;
+  background: #fff;
+  //box-shadow: 0 0 20px -5px #000;
   user-select: none !important;
+  padding: 0 70px;
+}
+
+.cd-primary-nav > li > a {
+  color: #126BAB;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Roboto;
 }
 .logoMinisterio {
   height: 100%;
-  padding: 20px;
+  padding: 10px 0;
   display: inline-block;
   background: #fff;
 }
 .tituloTablero {
   display: inline-block;
   color: #fff;
-  vertical-align: top;
-  padding: 20px;
+  //vertical-align: top;
+    margin-top: 80px;
+    background: #545554;
+    width: 100%;
+    height: 50px;
+    color: #fff;
 }
 .tituloTablero > h1,h2{
-  margin: 0;
+    margin: 0;
+    padding: 15px 70px;
 }
-

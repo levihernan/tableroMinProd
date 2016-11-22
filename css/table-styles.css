@@ -2,22 +2,30 @@
 	width:800px;
 }
 #tableroContainer td{
-
 	border:1px solid white;
 	border-collapse: collapse;
-	padding:10px 20px 10px 20px;
+	//padding:10px 20px 10px 20px;
 	text-align:center;
 	color:white;
 	font-family: Ubuntu;
-	font-size:23px;
+	font-size:14px;
+	vertical-align: middle;
+	text-transform: uppercase;
 }
 
 #tableroContainer thead td{
-	background-color: #017aa2;
+	background-color: #0091D1;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+		padding: 10px;
 }
 
 #tableroContainer tbody td{
-	background-color: #0397C8;
+	background-color: #C5E9F3;
+	color: #58595B;
+	line-height: 20px;
 }
 
 .tablero{
@@ -47,22 +55,22 @@
 }
 /*unidad*/
 .innerTable tr td:nth-child(2){
-	
+
 	width:100px;
 
 }/*UDD: periodo*/
 .innerTable tr td:nth-child(2){
-	
+
 	width:100px;
 
 }/*UDD: periodo*/
 .innerTable tr td:nth-child(2){
-	
+
 	width:100px;
 
 }
 .innerTable tr td:nth-child(2){
-	
+
 	width:100px;
 
 }

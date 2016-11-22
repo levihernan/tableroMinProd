@@ -140,7 +140,7 @@ Main components
 
 .cd-main-content {
   background: #e2e3df;
-  height: 100vh;
+  //height: 100vh;
   z-index: 2;
 }
 
@@ -575,7 +575,7 @@ Main components
 @media only screen and (min-width: 1170px) {
   .cd-primary-nav {
     position: static;
-    padding: 0 150px 0 0;
+    padding: 0 70px 0 0;
     height: auto;
     width: auto;
     float: right;
@@ -632,7 +632,7 @@ Main components
     height: 80px;
     line-height: 80px;
     padding: 0 10px;
-    color: #fff;
+    color: #136CAB;
     overflow: visible;
     border-bottom: none;
     -webkit-transition: color 0.3s, box-shadow 0.3s;
