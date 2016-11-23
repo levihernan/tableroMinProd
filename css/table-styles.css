@@ -29,10 +29,13 @@
 }
 
 .tablero{
-	width:90%;
+	width:1190px;
 	margin:0 auto;
 }
 
+.subtitulo{
+	padding:10px;
+}
 .innerTable{
 	padding:0px;
 }
@@ -47,30 +50,67 @@
 	font-family: Ubuntu;
 	font-size:22px;
 }
+
+
+/*--------LE SACO LOS BORDES NEGROS A LA PRIMERA Y ULTIMA
+			FILA DE CADA CATEGORIA---------------------------*/
+
+.innerTable tr:first-child td{
+	border-top:none !important;
+}
+
+.innerTable tr:last-child td{
+	border-bottom:none !important;
+}
+
+/*-----------------------------------------------------------*/
+
+
+
+
+/*------------DEFINO EL ANCHO DE CADA CELDA-------------------*/
+
 /*indicador*/
 .innerTable tr td:first-child{
 	font-weight: bold;
 	width:350px;
+	color:#39acde !important;
+	border-color:black !important;
 
 }
 /*unidad*/
 .innerTable tr td:nth-child(2){
 
-	width:100px;
+	width:120px;
 
 }/*UDD: periodo*/
-.innerTable tr td:nth-child(2){
+.innerTable tr td:nth-child(3){
 
-	width:100px;
+	width:120px;
 
 }/*UDD: periodo*/
-.innerTable tr td:nth-child(2){
+.innerTable tr td:nth-child(4){
 
-	width:100px;
+	width:120px;
 
 }
-.innerTable tr td:nth-child(2){
+.innerTable tr td:nth-child(5){
 
-	width:100px;
+	width:120px;
 
+}
+.innerTable tr td:nth-child(6){
+
+	width:120px;
+
+}
+.innerTable tr td:nth-child(7){
+
+	width:120px;
+
+}
+
+.innerTable .firstAndLast{
+	border-left:none !important;
+	border-right:none !important;
 }

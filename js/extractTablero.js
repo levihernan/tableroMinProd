@@ -1,6 +1,7 @@
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1VSGksDN0dnCGHCVdozWm4JwCR8YbI0jYmHmqEynmLhM/pubhtml'; //Funciona
 
-var filledColumns = ['indicador', 'periodo', 'valor','variacion_ia', 'val_2016','var_16_15']
+var filledColumns = ['periodo', 'valor','variacion_ia', 'val_2016'];
+var firstAndLastColumns = ['indicador','var_16_15']
 
 function renderSpreadsheetData() {
   Tabletop.init( { key: public_spreadsheet_url,
@@ -45,16 +46,22 @@ function draw(dataTablero, tabletop) {
           console.log(column);
           console.log("row[column]");
           console.log(row[column]);
+          //Las columnas que estn en filledColumns
           if(jQuery.inArray(column,filledColumns) !== -1){
             return {column: column, value: row[column]};
-          }else{
+          }//Las columnas first and last
+          else if(jQuery.inArray(column,firstAndLastColumns) !== -1){
+            return {column: column, value: row[column], class:"firstAndLast"};
+          }else //Las demas (son las que tiene valores fijos)
+          {
             return {column: column, value: "free space"};
           }
         });
       })
       .enter()
       .append('td')
-        .text(function (d) { return d.value; });
+        .text(function (d) { return d.value; })
+        .attr("class",function (d) { return d.class});
 
     return table;
   }	
