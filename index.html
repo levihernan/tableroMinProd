@@ -49,12 +49,13 @@
 			<li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a></li>
 		</ul> <!-- cd-header-buttons -->
 	</header>
+<main class="cd-main-content">
 	<div class="tituloTablero">
 		<h1>Tablero de la Economía Real</h1>
 	</div>
 
 	<div class="spreadedTablero"><!--Div que desaparece al achicarse la pantalla -->
-	<main class="cd-main-content">
+
 		<!-- your content here -->
 		<div id="mainContainer">
 			<div class="row" id="seriesContainer" style="height:100%">
@@ -107,8 +108,7 @@
 					</table>
 			</div>
 		</div>
-	</main>
-	</div><!--Div que desaparece al achicarse la pantalla -->
+
 	<div role="main" class="ui-content collapsedTablero" style="display:none">
 	    <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke my-custom-breakpoint">
 	      <thead>
@@ -195,9 +195,11 @@
 	    </table>
 
 	  </div>
+	</main>
+	</div><!--Div que desaparece al achicarse la pantalla -->
 	<nav class="cd-nav">
 		<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
-			<li><a href="#" onclick="toggleTablero();">Tablero</a></li>
+			<li><a href="#" onclick="closeNav();toggleTablero();">Tablero</a></li>
 			<li class="has-children">
 				<a href="">Series</a>
 
