@@ -96,7 +96,8 @@ function drawCharts(N){
                         data: nominal,
                         dataGrouping: {
                             units: groupingUnits
-                        }
+                        },
+                        tooltip: {valueSuffix: dataset[2*N-1][1]}
                     }]
                 }); //AXIS SIMPLE
         } else {
@@ -171,7 +172,8 @@ function drawCharts(N){
                 data: nominal,
                 dataGrouping: {
                     units: groupingUnits
-                }
+                },
+                tooltip: {valueSuffix: dataset[2*N-1][1]}
             }, {
                 type: 'column',
                 name: 'Variación anual',
@@ -179,7 +181,8 @@ function drawCharts(N){
                 yAxis: 1,
                 dataGrouping: {
                     units: groupingUnits
-                }
+                },
+                tooltip: {valueSuffix: '%'}
             }]
         });
         }
