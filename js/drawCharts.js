@@ -97,6 +97,7 @@ function drawCharts(N){
                         dataGrouping: {
                             units: groupingUnits
                         },
+                        color: '#00b9f1',
                         tooltip: {valueSuffix: dataset[2*N-1][1]}
                     }]
                 }); //AXIS SIMPLE
@@ -173,6 +174,7 @@ function drawCharts(N){
                 dataGrouping: {
                     units: groupingUnits
                 },
+                color: '#00b9f1',
                 tooltip: {valueSuffix: dataset[2*N-1][1]}
             }, {
                 type: 'column',
@@ -182,6 +184,8 @@ function drawCharts(N){
                 dataGrouping: {
                     units: groupingUnits
                 },
+                color: '#00b9f1',
+                negativeColor: '#767676',
                 tooltip: {valueSuffix: '%'}
             }]
         });

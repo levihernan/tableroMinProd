@@ -37,23 +37,24 @@ for (row = 0; row < 12; row++) {
 
 
 //Set titulo + unidades
-$('#ultimosDatosSubtitle').html(dataset[2*N-1][4]); //CHART TITLE
+$('#ultimosDatosSubtitle').html("Últimos datos "+dataset[2*N-1][4]); //CHART TITLE
 $('#ultimosDatosUnidades').html(dataset[2*N-1][0]); //YAXIS
 
 rowTitulos = "<tr><td>Período</td>";
 //AGREGAR IF
 rowTitulos += "<td>"+dataset[2*N-1][4]+"</td>";
-if( hayDatosVar ) {rowTitulos += "<td>Variación anual [%]</td>"};
+if( hayDatosVar ) {rowTitulos += "<td>V. anual [%]</td>"};
 rowTitulos += "</tr>"; //TITULOS
 $('#ultimosDatosTable').append( rowTitulos );
 //Carga la fila de titulos y la despliega en la table
 
 for (row = 0; row < 12; row++) {
     var periodo = dataset[0].slice(-12)[row];
+      tempDate = periodo.split("/");
 //    var periodo = new Date(dataset[0].slice(-12)[row]);
 //    rowDatos = "<tr><td>"+month[periodo.getUTCMonth()]+"-"+periodo.getUTCFullYear()+"</td>";
-    rowDatos = "<tr><td>"+periodo+"</td>";
-    rowDatos += "<td>"+ ultimosDatos[row] + "</td>";
+    rowDatos = "<tr><td>"+month[tempDate[1] - 1] +" "+ tempDate[2]+"</td>";
+    rowDatos += "<td>"+ Number(ultimosDatos[row]).toLocaleString() + "</td>";
     if( hayDatosVar ) {rowDatos += "<td>"+ ultimosDatos_var[row] + "</td>"};
 
     rowDatos += "</tr>";
