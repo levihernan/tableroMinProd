@@ -744,12 +744,12 @@ Main components
     height: 30px;
     line-height: 30px;
     padding: 0 18% 0 0;
-    color: #2e3233;
+    color: #787677;
     border-bottom: none;
     font-size: 1.4rem;
   }
   .cd-primary-nav .cd-secondary-nav a:hover {
-    color: #69aa6f;
+    color: #00b9f1;
   }
   .cd-primary-nav .cd-secondary-nav ul {
     /* Force Hardware Acceleration in WebKit */

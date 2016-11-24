@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu');
 
 h1, h2, tspan, text, a {
-  font-family: Ubuntu;
+  font-family: Roboto;
 }
 #mainContainer {
     margin: auto;
@@ -34,38 +34,38 @@ h1, h2, tspan, text, a {
   vertical-align: top;
   //padding: 20px;
 }
-#ultimosDatosTable   > tr > td:last-child {
-  font-style: italic;
+#ultimosDatosTable  tr  td:last-child {
+  //font-style: italic;
   //background-color: rgba(255, 255, 255, 0.4);
-  max-width: 100px;
+  //max-width: 100px;
 }
 #ultimosDatosTable   {
   width: 100%;
   text-transform: uppercase;
 }
-#ultimosDatosTable   > tr {
+#ultimosDatosTable   tr {
   background-color: #fff;
   line-height: 24px;
   font-size: 12px;
 }
-#ultimosDatosTable   > tr > td {
+#ultimosDatosTable  tr  td {
   vertical-align: middle;
 }
-#ultimosDatosTable   > tr:first-child {
+#ultimosDatosTable  tr:first-child {
   //font-weight: bold;
   font-size: 14px;
   line-height: 32px;
   background-color: #0091d1 !important;
   color: #fff;
 }
-#ultimosDatosTable   > tr:first-child > td {
+#ultimosDatosTable    tr:first-child > td {
   border: solid 1px #fff
 }
 
-#ultimosDatosTable   > tr:nth-child(odd) {
+#ultimosDatosTable    tr:nth-child(odd) {
   background-color: #c5e9f3;
 }
-#ultimosDatosTable > tbody > tr > td:last-child {
+#ultimosDatosTable  tbody  tr  td:last-child {
   //font-style: italic;
   //background-color: rgba(255, 255, 255, 0.4);
   //max-width: 100px;
@@ -132,7 +132,7 @@ h1, h2, tspan, text, a {
   box-shadow: 0 0 40px -15px #000;
 }
 
-.cd-primary-nav > li > a {
+.cd-primary-nav  li  a {
   color: #126BAB;
   text-decoration: none;
   text-transform: uppercase;
@@ -154,7 +154,7 @@ h1, h2, tspan, text, a {
     height: 50px;
     color: #fff;
 }
-.tituloTablero > h1,h2{
+.tituloTablero  h1,h2{
     margin: 0;
     padding: 15px 70px;
 }
