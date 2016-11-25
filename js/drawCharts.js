@@ -190,5 +190,4 @@ function drawCharts(N){
             }]
         });
         }
-        $('.highcharts-title')[0].setAttribute('x','100');
     };
