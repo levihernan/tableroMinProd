@@ -103,6 +103,32 @@ function draw(dataTablero, tabletop) {
   selection = d3.select('#fiscal');
   tabulate(dataFiscal, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15']); // 2 column table
 
+  $('#sectorExterno #unidad1').html('Millones de U$S');
+  $('#sectorExterno #unidad5').html('Anual');
+  $('#sectorExterno tr:nth-child(6) td#unidad1 ').html('U$S/Ton');
+  $('#inversion #unidad1').html('Millones de U$S');
+  $('#inversion #unidad5').html('Anual');
+  $('#inversion tr:nth-child(3) td#unidad1 ').html('Variación anual en %');
+  $('#inversion tr:nth-child(4) td#unidad1 ').html('Variación anual en %');
+  $('#inversion tr:nth-child(5) td#unidad1 ').html('Variación anual en %');
+  $('#inversion tr:nth-child(6) td#unidad1 ').html('');
+  $('#consumo #unidad1').html('');
+  $('#consumo tr:nth-child(1) td#unidad1 ').html('Variación anual en %');
+  $('#consumo tr:nth-child(5) td#unidad1 ').html('% de la PEA');
+  $('#consumo #unidad5').html('');
+  $('#precios #unidad1').html('enero 01 = 1');
+  $('#precios tr:nth-child(1) td#unidad1 ').html('');
+  $('#precios tr:nth-child(2) td#unidad1 ').html('');
+  $('#precios tr:nth-child(3) td#unidad1 ').html('$/U$S');
+  $('#precios #unidad5').html('Anual');
+  $('#sectorReal #unidad1').html('Variación anual en %');
+  $('#sectorReal #unidad5').html('Anual');
+  $('#monetario tr:nth-child(1) td#unidad1 ').html('Tasa nominal anual');
+  $('#monetario tr:nth-child(2) td#unidad1 ').html('Millones de $');
+  $('#monetario tr:nth-child(3) td#unidad1 ').html('Millones de U$S');
+  $('#monetario #unidad5').html('Acum.');
+  $('#fiscal #unidad1').html('Millones de U$S');
+  $('#fiscal #unidad5').html('Anual en %');
 }
 
 renderSpreadsheetData();

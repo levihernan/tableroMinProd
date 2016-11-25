@@ -42,7 +42,8 @@
 }
 
 .tablero{
-	width:1190px;
+	width:95%;
+	/*width:1190px;*/
 	margin:0 auto;
 	margin-bottom: 70px;
 }
@@ -79,15 +80,21 @@
 
 /*-----------------------------------------------------------*/
 
+/*------------DEFINO EL ANCHO DE CADA CELDA de los datos-------------------*/
+#headerIndicador{
+	width:350px !important;
+}
 
+#headerUnidad{
+	width:100px !important;
+}
 
-
-/*------------DEFINO EL ANCHO DE CADA CELDA-------------------*/
+/*------------DEFINO EL ANCHO DE CADA CELDA de los datos-------------------*/
 
 /*indicador*/
 .innerTable tr td:first-child{
 	font-weight: bold;
-	width:350px;
+	width:350px !important;
 	color:#39acde !important;
 	border-color:black !important;
 
@@ -95,32 +102,32 @@
 /*unidad*/
 .innerTable tr td:nth-child(2){
 
-	width:120px;
+	width:100px !important;
 
 }/*UDD: periodo*/
 .innerTable tr td:nth-child(3){
 
-	width:120px;
+	/*width:120px;*/
 
 }/*UDD: periodo*/
 .innerTable tr td:nth-child(4){
 
-	width:120px;
+	/*width:120px;*/
 
 }
 .innerTable tr td:nth-child(5){
 
-	width:120px;
+	/*width:120px;*/
 
 }
 .innerTable tr td:nth-child(6){
 
-	width:120px;
+	/*width:120px;*/
 
 }
 .innerTable tr td:nth-child(7){
 
-	width:120px;
+	/*width:120px;*/
 
 }
 
