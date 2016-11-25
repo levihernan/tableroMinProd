@@ -39,13 +39,14 @@ function draw(dataTablero, tabletop) {
       .data(function (row) {
 
         return columns.map(function (column) {
-          console.log("-----------------");
-          console.log("row");
-          console.log(row);
-          console.log("column");
-          console.log(column);
-          console.log("row[column]");
-          console.log(row[column]);
+          // console.log("-----------------");
+          // console.log("row");
+          // console.log(row);
+          // console.log("column");
+          // console.log(column);
+          // console.log("row[column]");
+          // console.log(row[column]);
+
           //Las columnas que estn en filledColumns
           if(jQuery.inArray(column,filledColumns) !== -1){
             return {column: column, value: row[column]};
@@ -54,14 +55,20 @@ function draw(dataTablero, tabletop) {
             return {column: column, value: row[column], class:"firstAndLast"};
           }else //Las demas (son las que tiene valores fijos)
           {
-            return {column: column, value: "free space"};
+            return {column: column, value: "free space",id:"unidad"};
           }
         });
       })
       .enter()
       .append('td')
         .text(function (d) { return d.value; })
-        .attr("class",function (d) { return d.class});
+        .attr("class",function (d) { return d.class})
+        .attr("id",function (d,i) {
+          if(d.id !== undefined){
+            return d.id+""+i;
+          } 
+          
+        });
 
     return table;
   }	
