@@ -29,9 +29,9 @@
 	<script src="https://code.highcharts.com/stock/highstock.js"></script>
 	<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-	
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<!--link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" /-->
+
+	<!--script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script-->
 	<script src="js/highstocks.js"></script>
 
 
@@ -47,7 +47,7 @@
 		<img src="img/logoMinisterio.png" class="logoMinisterio" draggable="false" />
 
 		<ul class="cd-header-buttons">
-			<li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a></li>
+			<li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></li>
 		</ul> <!-- cd-header-buttons -->
 	</header>
 <main class="cd-main-content">
@@ -55,15 +55,14 @@
 		<h1>Tablero de la Economía Real</h1>
 	</div>
 
-	<div class="spreadedTablero"><!--Div que desaparece al achicarse la pantalla -->
 
 		<!-- your content here -->
 		<div id="mainContainer">
 			<div class="row" id="seriesContainer" style="height:100%">
-				<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-1" id="chartContainer">
+				<div class="col-xs-12 col-xs-offset-0 col-md-6 col-md-offset-1" id="chartContainer">
 					<div id="chart-container" class="chart" ></div>
 				</div>
-				<div  class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0" id="ultimosDatosContainer">
+				<div  class="col-xs-12 col-xs-offset-0 col-md-4 col-md-offset-0" id="ultimosDatosContainer">
 
 					<h1 class="highcharts-title" id="ultimosDatosSubtitle"></h1>
 					<h3 id="ultimosDatosUnidades"></h3>
@@ -71,7 +70,7 @@
 					</table>
 				</div>
 			</div>
-
+			<div class="spreadedTablero"><!--Div que desaparece al achicarse la pantalla -->
 			<div id="tableroContainer">
 					<table id="" class="tablero">
 						<thead>
@@ -194,7 +193,7 @@
 	        </tr>
 	      </tbody>
 	    </table>
-	 
+
 	  </div>
 	</main>
 	</div><!--Div que desaparece al achicarse la pantalla -->

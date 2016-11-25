@@ -189,5 +189,6 @@ function drawCharts(N){
                 tooltip: {valueSuffix: '%'}
             }]
         });
-        }
+      };
+      $('.highcharts-title')[0].setAttribute('x','100');
     };
