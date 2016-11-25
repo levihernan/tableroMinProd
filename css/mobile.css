@@ -1,0 +1,29 @@
+html{
+  overflow-x: hidden;
+}
+@media ( max-width: 1169px ) {
+	#header{
+    padding: 0 20px;
+  }
+  .tituloTablero{
+    margin-top: 50px;
+    height: 36px;
+    margin-bottom: 10px;
+  }
+  .tituloTablero h1{
+    padding: 10px 20px;
+  }
+  .cd-primary-nav li a {
+    font-size: 12px;
+  }
+  #chartContainer{
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .highcharts-contextbutton{
+    display: none;
+  }
+  #ultimosDatosTable{
+    margin-bottom: 20px;
+  }
+	}
