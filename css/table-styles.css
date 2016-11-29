@@ -7,7 +7,10 @@
 		display:block !important;
 	}
 }
-
+#tableroContainer{
+	width: 80%;
+	margin: auto;
+}
 #tableroContainer tr{
 	width:800px;
 }
@@ -18,7 +21,7 @@
 	text-align:center;
 	color:white;
 	font-family: Roboto;
-	font-size:14px;
+	font-size:12px;
 	vertical-align: middle;
 	text-transform: uppercase;
 }
@@ -27,7 +30,7 @@
 	background-color: #0091D1;
     vertical-align: middle;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
 		padding: 10px;
 }
@@ -68,11 +71,16 @@
     margin-top: 10px;
     //box-shadow: 0 0 40px -15px #000;
 		pointer-events: none;
+    width: Calc(80% + 110px);
 }
 .opacity1{
 	opacity: 1 !important;
 }
 
+table{
+	table-layout: fixed;
+	width: 100%;
+}
 
 .tablero{
 	//width:95%;
@@ -127,7 +135,7 @@
 /*indicador*/
 .innerTable tr td:first-child{
 	font-weight: bold;
-	width:350px !important;
+	width:30% !important;
 	color:#39acde !important;
 	border-color:black !important;
 
@@ -135,31 +143,36 @@
 /*unidad*/
 .innerTable tr td:nth-child(2){
 
-	width:100px !important;
+	    width: 10% !important;
 
 }/*UDD: periodo*/
 .innerTable tr td:nth-child(3){
-
+    width: 10% !important;
 	/*width:120px;*/
 
 }/*UDD: periodo*/
 .innerTable tr td:nth-child(4){
-
+    width: 10% !important;
 	/*width:120px;*/
 
 }
 .innerTable tr td:nth-child(5){
-
+    width: 10% !important;
 	/*width:120px;*/
 
 }
 .innerTable tr td:nth-child(6){
-
+    width: 10% !important;
 	/*width:120px;*/
 
 }
 .innerTable tr td:nth-child(7){
+    width: 10% !important;
+	/*width:120px;*/
 
+}
+.innerTable tr td:nth-child(8){
+    width: 10% !important;
 	/*width:120px;*/
 
 }
