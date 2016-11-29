@@ -23,7 +23,7 @@
 	<script type="text/javascript" src="js/drawCharts.js"></script>
 	<script type="text/javascript" src="js/extractData.js"></script>
 	<script type="text/javascript" src="js/extractTablero.js"></script>
-	<script type="text/javascript" src="js/ultimosDatos.js"></script>
+	<script type="text/javascript" src="js/showFloatingHeader.js"></script>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -38,7 +38,7 @@
 
 	<title>Tablero de la Economia Real</title>
 </head>
-<body>
+<body onscroll="showFloatingHeader()">
 
 	  <div id="wrap"></div>
 	  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r77/three.min.js'></script>
@@ -50,6 +50,26 @@
 		<ul class="cd-header-buttons">
 			<li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></li>
 		</ul> <!-- cd-header-buttons -->
+
+		<table id="tableroFloatingHeader" class="tablero">
+								<thead>
+									<tr>
+										<td rowspan="2" id="headerIndicador" style="width:350px !important">Indicador</td>
+										<td rowspan="2" id="headerUnidad" style="width:100px !important">Unidad</td>
+										<td colspan="3">Último dato disponible</td>
+										<td colspan="3">Acumulado</td>
+									</tr>
+									<tr>
+										<td style="width:120px">Período</td>
+										<td style="width:120px">Valor</td>
+										<td style="width:120px">Variación i.a.</td>
+										<td style="width:120px">Período</td>
+										<td style="width:120px">2016</td>
+										<td style="width:120px">Var. 16/15</td>
+									</tr>
+								</thead>
+							</table>
+
 	</header>
 <main class="cd-main-content">
 	<div class="tituloTablero">
@@ -194,14 +214,14 @@
 							<tr><td id="fiscal" class="innerTable" colspan="8"></td></tr>
 						</tbody>
 					</table>
-						
+
 				</div>
 			</div>
 
 
 		</div><!--Div que desaparece al achicarse la pantalla -->
 	</main>
-	
+
 	<nav class="cd-nav">
 		<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
 			<li><a href="#" onclick="closeNav();toggleTablero();">Tablero</a></li>
