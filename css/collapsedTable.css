@@ -1,0 +1,100 @@
+#collapsedTableroContainer .number0{
+
+	margin-top:30px;
+
+}
+
+#collapsedTableroContainer .number1:before{
+	content:"Unidad";
+	margin-left:15px;
+	font-weight:bolder;
+	float:left;
+}
+#collapsedTableroContainer .number1{
+	background-color: #f5f5f5;
+	text-align:right;
+	padding-right:68px;
+}
+
+#collapsedTableroContainer .number2:before{
+	content:"Periodo";
+	margin-left:15px;
+	font-weight:bolder;
+	float:left;
+}
+#collapsedTableroContainer .number2{
+	background-color: #f5f5f5;
+	text-align:right;
+	padding-right:90px;
+}
+
+#collapsedTableroContainer .number3:before{
+	content:"Valor";
+	margin-left:15px;
+	font-weight:bolder;
+	float:left;
+}
+#collapsedTableroContainer .number3{
+	background-color: #f5f5f5;
+	text-align:right;
+	padding-right:90px;
+}
+
+#collapsedTableroContainer .number4:before{
+	margin-left:15px;
+	font-weight:bolder;
+	content:"Variacion I.A.";
+	float:left;
+}
+#collapsedTableroContainer .number4{
+	background-color: #f5f5f5;
+	text-align:right;
+	padding-right:90px;
+}
+
+
+#collapsedTableroContainer .number5:before{
+	margin-left:15px;
+	font-weight:bolder;
+	content:"Periodo";
+	float:left;
+}
+#collapsedTableroContainer .number5{
+	background-color: #f5f5f5;
+	text-align:right;
+	padding-right:68px;
+}
+
+
+#collapsedTableroContainer .number6:before{
+	margin-left:15px;
+	font-weight:bolder;
+	float:left;
+	content:"2016";
+}
+#collapsedTableroContainer .number6{
+	background-color: #f5f5f5;
+	text-align:right;
+	padding-right:90px;
+}
+
+
+#collapsedTableroContainer .number7:before{
+	margin-left:15px;
+	font-weight:bolder;
+	content:"Var 2016/2015";
+	float:left;
+}
+#collapsedTableroContainer .number7{
+	background-color: #f5f5f5;
+	text-align:right;
+	padding-right:90px;
+}
+
+#collapsedTableroContainer .acumulado{
+	background-color: #dfe6e8;
+}
+
+#collapsedTableroContainer .udd{
+	background-color: #dfe6e8;
+}
