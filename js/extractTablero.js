@@ -126,34 +126,34 @@ function draw(dataTablero, tabletop) {
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
-  $('#collapsed-table tr:nth-child(6) td#unidad1').html('U$S/Ton');   
+  $('#collapsed-table tr:nth-child(6) td#unidad1').html('U$S/Ton');
 
 
   /*-----------------------Inversion-------------------*/
   $('#inversion #unidad1').html('Millones de U$S');
   $('#inversion #unidad5').html('Anual');
-  $('#inversion tr:nth-child(3) td#unidad1 ').html('Variación anual en %');
-  $('#inversion tr:nth-child(4) td#unidad1 ').html('Variación anual en %');
-  $('#inversion tr:nth-child(5) td#unidad1 ').html('Variación anual en %');
+  $('#inversion tr:nth-child(3) td#unidad1 ').html('Variación anual [%]');
+  $('#inversion tr:nth-child(4) td#unidad1 ').html('Variación anual [%]');
+  $('#inversion tr:nth-child(5) td#unidad1 ').html('Variación anual [%]');
   $('#inversion tr:nth-child(6) td#unidad1 ').html('');
   for(var i = 7;i<13;i++){
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
-  $('#collapsed-table tr:nth-child(9) td#unidad1').html('Variación anual en %');  
-  $('#collapsed-table tr:nth-child(10) td#unidad1').html('Variación anual en %');  
-  $('#collapsed-table tr:nth-child(11) td#unidad1').html('Variación anual en %');  
+  $('#collapsed-table tr:nth-child(9) td#unidad1').html('Variación anual [%]');
+  $('#collapsed-table tr:nth-child(10) td#unidad1').html('Variación anual [%]');
+  $('#collapsed-table tr:nth-child(11) td#unidad1').html('Variación anual [%]');
 
   /*-----------------------Consumo-------------------*/
   $('#consumo #unidad1').html('');
-  $('#consumo tr:nth-child(1) td#unidad1 ').html('Variación anual en %');
+  $('#consumo tr:nth-child(1) td#unidad1 ').html('Variación anual [%]');
   $('#consumo tr:nth-child(5) td#unidad1 ').html('% de la PEA');
   $('#consumo #unidad5').html('');
   for(var i = 13;i<18;i++){
-    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Variación anual en %');
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Variación anual [%]');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
-  $('#collapsed-table tr:nth-child(17) td#unidad1').html('Variación anual en %');  
+  $('#collapsed-table tr:nth-child(17) td#unidad1').html('Variación anual [%]');
 
   /*-----------------------Precios-------------------*/
   $('#precios #unidad1').html('enero 01 = 1');
@@ -165,15 +165,15 @@ function draw(dataTablero, tabletop) {
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('enero 01 = 1');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
-  $('#collapsed-table tr:nth-child(18) td#unidad1').html('');  
-  $('#collapsed-table tr:nth-child(19) td#unidad1').html('');  
-  $('#collapsed-table tr:nth-child(20) td#unidad1').html('$/U$S');  
+  $('#collapsed-table tr:nth-child(18) td#unidad1').html('');
+  $('#collapsed-table tr:nth-child(19) td#unidad1').html('');
+  $('#collapsed-table tr:nth-child(20) td#unidad1').html('$/U$S');
 
   /*-----------------------Sector Real-------------------*/
-  $('#sectorReal #unidad1').html('Variación anual en %');
+  $('#sectorReal #unidad1').html('Variación anual [%]');
   $('#sectorReal #unidad5').html('Anual');
   for(var i = 24;i<34;i++){
-    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Variación anual en %');
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Variación anual [%]');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
 
@@ -190,10 +190,10 @@ function draw(dataTablero, tabletop) {
 
   /*-----------------------Fiscal-------------------*/
   $('#fiscal #unidad1').html('Millones de U$S');
-  $('#fiscal #unidad5').html('Anual en %');
+  $('#fiscal #unidad5').html('Anual [%]');
   for(var i = 37;i<41;i++){
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
-    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual en %');
+    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual [%]');
   }
 
 

@@ -85,6 +85,9 @@
 	opacity: 1 !important;
 	transform: rotateX(0deg) !important;
 }
+.hidden{
+	opacity: 0 !important;
+}
 
 table{
 	table-layout: fixed;
