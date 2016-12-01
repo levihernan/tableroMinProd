@@ -118,32 +118,85 @@ function draw(dataTablero, tabletop) {
   selection = d3.select('#collapsedTableroContainer');
   tabulate(dataTotal, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
+  /*-----------------------Sector externo-------------------*/
   $('#sectorExterno #unidad1').html('Millones de U$S');
   $('#sectorExterno #unidad5').html('Anual');
   $('#sectorExterno tr:nth-child(6) td#unidad1 ').html('U$S/Ton');
+  for(var i = 1;i<7;i++){
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
+    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
+  }
+  $('#collapsed-table tr:nth-child(6) td#unidad1').html('U$S/Ton');   
+
+
+  /*-----------------------Inversion-------------------*/
   $('#inversion #unidad1').html('Millones de U$S');
   $('#inversion #unidad5').html('Anual');
   $('#inversion tr:nth-child(3) td#unidad1 ').html('Variación anual en %');
   $('#inversion tr:nth-child(4) td#unidad1 ').html('Variación anual en %');
   $('#inversion tr:nth-child(5) td#unidad1 ').html('Variación anual en %');
   $('#inversion tr:nth-child(6) td#unidad1 ').html('');
+  for(var i = 7;i<13;i++){
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
+    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
+  }
+  $('#collapsed-table tr:nth-child(9) td#unidad1').html('Variación anual en %');  
+  $('#collapsed-table tr:nth-child(10) td#unidad1').html('Variación anual en %');  
+  $('#collapsed-table tr:nth-child(11) td#unidad1').html('Variación anual en %');  
+
+  /*-----------------------Consumo-------------------*/
   $('#consumo #unidad1').html('');
   $('#consumo tr:nth-child(1) td#unidad1 ').html('Variación anual en %');
   $('#consumo tr:nth-child(5) td#unidad1 ').html('% de la PEA');
   $('#consumo #unidad5').html('');
+  for(var i = 13;i<18;i++){
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Variación anual en %');
+    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
+  }
+  $('#collapsed-table tr:nth-child(17) td#unidad1').html('Variación anual en %');  
+
+  /*-----------------------Precios-------------------*/
   $('#precios #unidad1').html('enero 01 = 1');
   $('#precios tr:nth-child(1) td#unidad1 ').html('');
   $('#precios tr:nth-child(2) td#unidad1 ').html('');
   $('#precios tr:nth-child(3) td#unidad1 ').html('$/U$S');
   $('#precios #unidad5').html('Anual');
+  for(var i = 18;i<24;i++){
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('enero 01 = 1');
+    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
+  }
+  $('#collapsed-table tr:nth-child(18) td#unidad1').html('');  
+  $('#collapsed-table tr:nth-child(19) td#unidad1').html('');  
+  $('#collapsed-table tr:nth-child(20) td#unidad1').html('$/U$S');  
+
+  /*-----------------------Sector Real-------------------*/
   $('#sectorReal #unidad1').html('Variación anual en %');
   $('#sectorReal #unidad5').html('Anual');
+  for(var i = 24;i<34;i++){
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Variación anual en %');
+    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
+  }
+
+  /*-----------------------Monetario-------------------*/
   $('#monetario tr:nth-child(1) td#unidad1 ').html('Tasa nominal anual');
   $('#monetario tr:nth-child(2) td#unidad1 ').html('Millones de $');
   $('#monetario tr:nth-child(3) td#unidad1 ').html('Millones de U$S');
   $('#monetario #unidad5').html('Acum.');
+  for(var i = 34;i<37;i++){
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
+    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Acum');
+  }
+  $('#collapsed-table tr:nth-child(34) td#unidad1').html('Tasa Nominal Anual');
+
+  /*-----------------------Fiscal-------------------*/
   $('#fiscal #unidad1').html('Millones de U$S');
   $('#fiscal #unidad5').html('Anual en %');
+  for(var i = 37;i<41;i++){
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
+    $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual en %');
+  }
+
+
 
   // Agrego separadores de "Ultimo dato disponible" y "Acumulado" en CollapsedTable
   $('#collapsedTableroContainer #collapsed-table td.number2').before('<td class="udd">Último dato disponible</td>')
