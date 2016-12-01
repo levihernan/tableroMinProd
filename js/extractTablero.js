@@ -1,4 +1,4 @@
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1VSGksDN0dnCGHCVdozWm4JwCR8YbI0jYmHmqEynmLhM/pubhtml'; //Funciona
+var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1mCPA8c2TQUCQ6ZVzYMazEXeI303P-wsn6i_ojD1Mf7c/pubhtml'; //Funciona
 
 var filledColumns = ['periodo', 'valor','variacion_ia', 'val_2016'];
 var firstAndLastColumns = ['indicador','var_16_15']
@@ -31,7 +31,7 @@ function draw(dataTablero, tabletop) {
                       .attr("data-mode","reflow")
                       .attr("class","ui-responsive ui-table-reflow table-stroke")
     }
- 
+
     var thead = table.append('thead')
     var tbody = table.append('tbody');
 
@@ -69,19 +69,19 @@ function draw(dataTablero, tabletop) {
       .enter()
       .append('td')
         .text(function (d) { return d.value; })
-        .attr("class",function (d,i) { 
-  
+        .attr("class",function (d,i) {
+
             return "number"+i;
 
         })
         .attr("id",function (d,i) {
           if(d.id !== undefined){
             return d.id+""+i;
-          } 
+          }
         });
 
     return table;
-  }	
+  }
 
   // render the table(s)
   //las columnas las tengo que incluir para guardar el espacio para ellas, incluso a las que no les paso data
@@ -112,7 +112,7 @@ function draw(dataTablero, tabletop) {
   dataFiscal = dataTablero.slice(36,40);
   selection = d3.select('#fiscal');
   tabulate(dataFiscal, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
-  
+
   /*-----Data para tablero comprimido ----------------*/
   dataTotal = dataTablero.slice(0,40);
   selection = d3.select('#collapsedTableroContainer');
