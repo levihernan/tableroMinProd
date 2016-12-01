@@ -41,12 +41,7 @@ function drawCharts(N){
         if( !hayDatosVar ){ //SI NO HAY DATOS_VAR
                 Highcharts.stockChart('chart-container', {
                       rangeSelector: {
-                        buttons: [
-                          {
-                        	type: 'month',
-                        	count: 3,
-                        	text: '3m'
-                        }, {
+                        buttons: [{
                         	type: 'month',
                         	count: 6,
                         	text: '6m'
@@ -105,12 +100,7 @@ function drawCharts(N){
         // create the chart
         Highcharts.stockChart('chart-container', {
               rangeSelector: {
-                buttons: [
-                  {
-                	type: 'month',
-                	count: 3,
-                	text: '3m'
-                }, {
+                buttons: [{
                 	type: 'month',
                 	count: 6,
                 	text: '6m'
@@ -190,5 +180,5 @@ function drawCharts(N){
             }]
         });
       };
-      $('.highcharts-title')[0].setAttribute('x','100');
+      //$('.highcharts-title')[0].setAttribute('x','100');
     };

@@ -53,13 +53,14 @@ for (row = 0; row < 12; row++) {
       tempDate = periodo.split("/");
 //    var periodo = new Date(dataset[0].slice(-12)[row]);
 //    rowDatos = "<tr><td>"+month[periodo.getUTCMonth()]+"-"+periodo.getUTCFullYear()+"</td>";
+    if(!(ultimosDatos[row] == "#N/A" || ultimosDatos[row] == "")){
     rowDatos = "<tr><td>"+month[tempDate[1] - 1] +" "+ tempDate[2]+"</td>";
     rowDatos += "<td>"+ Number(ultimosDatos[row]).toLocaleString() + "</td>";
-    if( hayDatosVar ) {rowDatos += "<td>"+ ultimosDatos_var[row] + "</td>"};
+    if( hayDatosVar ) {rowDatos += "<td>"+ Number(ultimosDatos_var[row]).toLocaleString() + "</td>"};
 
     rowDatos += "</tr>";
     $('#ultimosDatosTable').append( rowDatos );
-};
+};}
 }
 
 function cropArrays(value,index,obj){
