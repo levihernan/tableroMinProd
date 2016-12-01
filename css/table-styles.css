@@ -21,7 +21,7 @@
 	text-align:center;
 	color:white;
 	font-family: Roboto;
-	font-size:12px;
+	font-size:11px;
 	vertical-align: middle;
 	text-transform: uppercase;
 }
@@ -30,15 +30,19 @@
 	background-color: #0091D1;
     vertical-align: middle;
     text-transform: uppercase;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
 		padding: 10px;
 }
 
 #tableroContainer tbody td{
 	background-color: #C5E9F3;
 	color: #58595B;
-	line-height: 20px;
+	line-height: 16px;
+}
+
+.innerTable tbody tr:hover td{
+	background: #F2FCFF !important;
 }
 
 #tableroFloatingHeader tr{
@@ -51,7 +55,7 @@
 	text-align:center;
 	color:white;
 	//font-family: Roboto;
-	font-size:14px;
+	font-size:12px;
 	vertical-align: middle;
 	text-transform: uppercase;
 }
@@ -63,7 +67,7 @@
 	background-color: #0091D1;
     vertical-align: middle;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
 		padding: 10px;
 }
@@ -102,12 +106,12 @@ table{
 }
 .innerTable td{
 
-	border:1px solid !important;
+	border:1px solid #999 !important;
 	border-collapse: collapse;
-	padding:10px 20px 10px 20px;
+	padding:10px 5px;
 	text-align:center;
 	background-color: white !important;
-	color:black !important;
+	color:#000 !important;
 	font-family: Ubuntu;
 	font-size:22px;
 }
@@ -142,7 +146,7 @@ table{
 	font-weight: bold;
 	width:30% !important;
 	color:#39acde !important;
-	border-color:black !important;
+	border-color:#999 !important;
 
 }
 /*unidad*/
