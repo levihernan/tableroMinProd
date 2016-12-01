@@ -4453,7 +4453,7 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 	}
 }
 /* Breakpoint to show as a standard table at 560px (35em x 16px) or wider */ 
-@media ( min-width: 35em ) {
+@media ( min-width: 850px ) {
 	/* Show the table header rows */ 
 	.ui-table-reflow.ui-responsive td,
 	.ui-table-reflow.ui-responsive th,
@@ -4472,7 +4472,7 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 }
 /* Hack to make IE9 and WP7.5 treat cells like block level elements, scoped to ui-responsive class */ 
 /* Applied in a max-width media query up to the table layout breakpoint so we don't need to negate this*/ 
-@media ( max-width: 35em ) {
+@media ( max-width: 850px ) {
 	.ui-table-reflow.ui-responsive td,
 	.ui-table-reflow.ui-responsive th {
 		width: 100%;
