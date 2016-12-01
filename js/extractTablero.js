@@ -11,6 +11,7 @@ function renderSpreadsheetData() {
 }
 
 function draw(dataTablero, tabletop) {
+  $('#wrap').toggleClass('dissapear');
 	// draw chart
 	console.log("Data Tablero:");
 	console.log(dataTablero);
@@ -66,12 +67,12 @@ function draw(dataTablero, tabletop) {
         .attr("id",function (d,i) {
           if(d.id !== undefined){
             return d.id+""+i;
-          } 
-          
+          }
+
         });
 
     return table;
-  }	
+  }
 
   // render the table(s)
   //las columnas las tengo que incluir para guardar el espacio para ellas, incluso a las que no les paso data

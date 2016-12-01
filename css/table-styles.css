@@ -55,18 +55,22 @@
 	vertical-align: middle;
 	text-transform: uppercase;
 }
-
+#header{
+	perspective: 1000px;
+}
 #tableroFloatingHeader thead td{
+	font-family: Roboto;
 	background-color: #0091D1;
     vertical-align: middle;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 16px;
 		padding: 10px;
 }
 
 #tableroFloatingHeader{
 	opacity: 0;
+	transform: rotateX(90deg);
 	transition: all ease 0.5s;
     margin-top: 10px;
     //box-shadow: 0 0 40px -15px #000;
@@ -75,6 +79,7 @@
 }
 .opacity1{
 	opacity: 1 !important;
+	transform: rotateX(0deg) !important;
 }
 
 table{

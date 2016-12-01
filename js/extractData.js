@@ -31,7 +31,7 @@ function transpose(a) {
 }
 
 function draw(data, tabletop) {
-  $('#wrap').toggleClass('dissapear');
+  //$('#wrap').toggleClass('dissapear');
   // draw chart
   console.log("Data:");
   console.log(data);
