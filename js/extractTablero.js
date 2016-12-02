@@ -56,6 +56,7 @@ function draw(dataTablero, tabletop) {
 
           //Las columnas que estn en filledColumns
           if(jQuery.inArray(column,filledColumns) !== -1){
+            //return {column: column, value: Number(row[column]).toLocaleString()};
             return {column: column, value: row[column]};
           }//Las columnas first and last
           else if(jQuery.inArray(column,firstAndLastColumns) !== -1){
