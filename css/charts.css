@@ -38,7 +38,7 @@ h1, h2, tspan, text, a {
   //padding: 20px;
 }
 #ultimosDatosTable     tr   td:last-child {
-  font-style: italic;
+  //font-style: italic;
   //background-color: rgba(255, 255, 255, 0.4);
   max-width: 100px;
 }

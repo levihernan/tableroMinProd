@@ -60,7 +60,7 @@ function drawCharts(N){
                         	type: 'all',
                         	text: 'All'
                         }],
-                          selected: 3,
+                          selected: 2,
                           inputEnabled: false,
                       },
         						credits: {
@@ -119,7 +119,7 @@ function drawCharts(N){
                 	type: 'all',
                 	text: 'All'
                 }],
-                  selected: 3,
+                  selected: 2,
                   inputEnabled: false,
               },
 						credits: {
