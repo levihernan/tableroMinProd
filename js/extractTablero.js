@@ -122,11 +122,15 @@ function draw(dataTablero, tabletop) {
   /*-----------------------Sector externo-------------------*/
   $('#sectorExterno #unidad1').html('Millones de U$S');
   $('#sectorExterno #unidad5').html('Anual');
+  $('#sectorExterno tr:nth-child(2) td#unidad1 ').html('Variación anual [%]');
+  $('#sectorExterno tr:nth-child(4) td#unidad1 ').html('Variación anual [%]');
   $('#sectorExterno tr:nth-child(6) td#unidad1 ').html('U$S/Ton');
   for(var i = 1;i<7;i++){
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
+  $('#collapsed-table tr:nth-child(2) td#unidad1 ').html('Variación anual [%]');
+  $('#collapsed-table tr:nth-child(4) td#unidad1 ').html('Variación anual [%]');
   $('#collapsed-table tr:nth-child(6) td#unidad1').html('U$S/Ton');
 
 
@@ -134,66 +138,81 @@ function draw(dataTablero, tabletop) {
   $('#inversion #unidad1').html('Millones de U$S');
   $('#inversion #unidad5').html('Anual');
   $('#inversion tr:nth-child(3) td#unidad1 ').html('Variación anual [%]');
-  $('#inversion tr:nth-child(4) td#unidad1 ').html('Variación anual [%]');
-  $('#inversion tr:nth-child(5) td#unidad1 ').html('Variación anual [%]');
-  $('#inversion tr:nth-child(6) td#unidad1 ').html('');
+  $('#inversion tr:nth-child(4) td#unidad1 ').html('Índice Ene-2015=100');
+  $('#inversion tr:nth-child(5) td#unidad1 ').html('Miles de M U$S - 2004');
   for(var i = 7;i<13;i++){
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
   $('#collapsed-table tr:nth-child(9) td#unidad1').html('Variación anual [%]');
-  $('#collapsed-table tr:nth-child(10) td#unidad1').html('Variación anual [%]');
-  $('#collapsed-table tr:nth-child(11) td#unidad1').html('Variación anual [%]');
+  $('#collapsed-table tr:nth-child(10) td#unidad1').html('Índice Ene-2015=100');
+  $('#collapsed-table tr:nth-child(11) td#unidad1').html('Miles de M U$S de 2004');
 
   /*-----------------------Consumo-------------------*/
-  $('#consumo #unidad1').html('');
-  $('#consumo tr:nth-child(1) td#unidad1 ').html('Variación anual [%]');
-  $('#consumo tr:nth-child(5) td#unidad1 ').html('% de la PEA');
+  $('#consumo #unidad1').html('Miles de M U$S - 2014');
+  $('#consumo tr:nth-child(3) td#unidad1 ').html('Miles de unidades');
+  $('#consumo tr:nth-child(4) td#unidad1 ').html('Millones de pesos');
+  $('#consumo tr:nth-child(5) td#unidad1 ').html('Tasa (%)');
   $('#consumo #unidad5').html('');
   for(var i = 13;i<18;i++){
-    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Variación anual [%]');
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Miles de M U$S - 2014');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
-  $('#collapsed-table tr:nth-child(17) td#unidad1').html('Variación anual [%]');
+  $('#collapsed-table tr:nth-child(15) td#unidad1').html('Miles de unidades');
+  $('#collapsed-table tr:nth-child(16) td#unidad1').html('Millones de pesos');
+  $('#collapsed-table tr:nth-child(17) td#unidad1').html('Tasa (%)');
 
   /*-----------------------Precios-------------------*/
-  $('#precios #unidad1').html('enero 01 = 1');
-  $('#precios tr:nth-child(1) td#unidad1 ').html('');
-  $('#precios tr:nth-child(2) td#unidad1 ').html('');
+  $('#precios #unidad1').html('Índice (enero 01 = 1)');
+  $('#precios tr:nth-child(1) td#unidad1 ').html('Pesos');
+  $('#precios tr:nth-child(2) td#unidad1 ').html('Variación mensual [%]');
   $('#precios tr:nth-child(3) td#unidad1 ').html('$/U$S');
   $('#precios #unidad5').html('Anual');
   for(var i = 18;i<24;i++){
-    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('enero 01 = 1');
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Índice (enero 01 = 1)');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
-  $('#collapsed-table tr:nth-child(18) td#unidad1').html('');
-  $('#collapsed-table tr:nth-child(19) td#unidad1').html('');
+  $('#collapsed-table tr:nth-child(18) td#unidad1').html('Pesos');
+  $('#collapsed-table tr:nth-child(19) td#unidad1').html('Variación mensual [%]');
   $('#collapsed-table tr:nth-child(20) td#unidad1').html('$/U$S');
 
   /*-----------------------Sector Real-------------------*/
   $('#sectorReal #unidad1').html('Variación anual [%]');
   $('#sectorReal #unidad5').html('Anual');
+  $('#sectorReal tr:nth-child(4) td#unidad1 ').html('Miles de Un.');
+  $('#sectorReal tr:nth-child(5) td#unidad1 ').html('Miles de Ton.');
+  $('#sectorReal tr:nth-child(6) td#unidad1 ').html('Miles de Ton.');
+  $('#sectorReal tr:nth-child(7) td#unidad1 ').html('Millones de m3');
+  $('#sectorReal tr:nth-child(8) td#unidad1 ').html('Millones de m3');
+  $('#sectorReal tr:nth-child(9) td#unidad1 ').html('Miles de unidades');
   for(var i = 24;i<34;i++){
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Variación anual [%]');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
+  $('#collapsed-table tr:nth-child(27) td#unidad1').html('Miles de Un');
+  $('#collapsed-table tr:nth-child(28) td#unidad1').html('Miles de Ton');
+  $('#collapsed-table tr:nth-child(29) td#unidad1').html('Miles de Ton');
+  $('#collapsed-table tr:nth-child(30) td#unidad1').html('Millones de m3');
+  $('#collapsed-table tr:nth-child(31) td#unidad1').html('Millones de m3');
 
   /*-----------------------Monetario-------------------*/
-  $('#monetario tr:nth-child(1) td#unidad1 ').html('Tasa nominal anual');
-  $('#monetario tr:nth-child(2) td#unidad1 ').html('Millones de $');
+  $('#monetario tr:nth-child(1) td#unidad1 ').html('Tasa nominal anual [%]');
+  $('#monetario tr:nth-child(2) td#unidad1 ').html('Miles de Millones de $');
   $('#monetario tr:nth-child(3) td#unidad1 ').html('Millones de U$S');
   $('#monetario #unidad5').html('Acum.');
   for(var i = 34;i<37;i++){
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Acum');
   }
-  $('#collapsed-table tr:nth-child(34) td#unidad1').html('Tasa Nominal Anual');
+  $('#collapsed-table tr:nth-child(34) td#unidad1').html('Tasa nominal anual [%]');
+  $('#collapsed-table tr:nth-child(35) td#unidad1').html('Miles de Millones de $');
+  $('#collapsed-table tr:nth-child(36) td#unidad1').html('Millones de U$S');
 
   /*-----------------------Fiscal-------------------*/
-  $('#fiscal #unidad1').html('Millones de U$S');
+  $('#fiscal #unidad1').html('Miles de Mill. de U$S');
   $('#fiscal #unidad5').html('Anual [%]');
   for(var i = 37;i<41;i++){
-    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de U$S');
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Miles de Millones de U$S');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual [%]');
   }
 
