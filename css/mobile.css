@@ -54,6 +54,9 @@ html{
     #ultimosDatosTable tr:first-child td {
       font-size: 10px;
     }
+    .ui-content{
+      padding-top: 0 !important;
+    }
   }
 
   @media ( max-width: 950px ) {

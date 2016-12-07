@@ -6,7 +6,20 @@
 	.collapsedTablero{
 		display:block !important;
 	}
+	#tableroContainer tr{
+		display: block;
+		width: 100% !important;
+		height: 30px;
+		overflow: hidden;
+		transition: all ease 0.5s;
+		margin: 6px 0;
+	}
 }
+
+.spreadedTableRow{
+	height: 200px !important;
+}
+
 #tableroContainer{
 	width: 80%;
 	margin: auto;
