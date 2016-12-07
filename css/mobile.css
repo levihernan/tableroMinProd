@@ -4,7 +4,7 @@ html{
 @media ( max-width: 1169px ) {
   #tableroFloatingHeader{
     width: Calc( 90% + 30px ) !important;
-    box-shadow: 0 0 40px -15px #000;
+    //box-shadow: 0 0 40px -15px #000;
   }
 
   #tableroContainer{
@@ -43,6 +43,7 @@ html{
   @media ( max-width: 850px ) {
     #tableroFloatingHeader{
       display: none !important;
+      opacity: 0 !important;
     }
     #tableroContainer{
       width: 100% !important;

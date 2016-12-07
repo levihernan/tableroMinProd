@@ -1,7 +1,7 @@
 function showFloatingHeaderBody() {
 var scroller = $("body");
 
-  if (scroller.scrollTop() > 120) {
+  if (scroller.scrollTop() > 90) {
     $('#tableroFloatingHeader').addClass("opacity1");
     console.log('body')
   } else {
@@ -11,7 +11,7 @@ var scroller = $("body");
 function showFloatingHeaderHTML() {
 var scroller = $("html");
 
-  if (scroller.scrollTop() > 120) {
+  if (scroller.scrollTop() > 90) {
     $('#tableroFloatingHeader').addClass("opacity1");
     console.log('html')
   } else if ((scroller.scrollTop() > 0)) {

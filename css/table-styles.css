@@ -73,17 +73,19 @@
 }
 
 #tableroFloatingHeader{
-	opacity: 0;
-	transform: rotateX(90deg);
-	transition: all ease 0.5s;
-    margin-top: 10px;
-    //box-shadow: 0 0 40px -15px #000;
-		pointer-events: none;
+		opacity: 0;
+    /* transform: rotateX(90deg); */
+    transition: box-shadow ease 0.2s;
+    margin-top: -5px;
+    pointer-events: none;
     width: Calc(80% + 110px);
+		display: table !important;
+    /* box-shadow: 0 0 40px -15px; */
 }
 .opacity1{
-	opacity: 1 !important;
-	transform: rotateX(0deg) !important;
+		opacity: 1 !important;
+		//transform: rotateX(0deg) !important;
+		//box-shadow: 0 0 40px -15px;
 }
 .hidden{
 	opacity: 0 !important;
