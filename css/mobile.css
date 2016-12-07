@@ -57,6 +57,10 @@ html{
     .ui-content{
       padding-top: 0 !important;
     }
+    .chart{
+      padding-right: 10px;
+      background: #fff;
+    }
   }
 
   @media ( max-width: 950px ) {
