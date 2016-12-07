@@ -225,7 +225,7 @@ function draw(dataTablero, tabletop) {
 
 }
 
-$(document).on('click', '#collapsed-table tr',function() {
+$(document).on('click touch', '#collapsed-table tr',function() {
 	$(this).toggleClass('spreadedTableRow');
 });
 renderSpreadsheetData();

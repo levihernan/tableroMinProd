@@ -8,6 +8,7 @@
 	//background: linear-gradient(to top, #C5E9F3, #C5E9F3);
 	background: #C5E9F3;
   font-weight: 500 !important;
+	cursor: pointer;
 }
 #collapsedTableroContainer tbody td{
 	border-radius: 3px;
