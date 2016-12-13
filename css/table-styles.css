@@ -210,5 +210,24 @@ t;
 }
 .innerTable .number7{
 	border-right:none !important;
+}
 
+/*STYLING DE COLORES*/
+td.number3, td.number4, td.number6, td.number7{
+	background-color: #f8f8f8 !important;
+	transition: all ease 0.2s;
+}
+.upValue{
+	color: #00B050 !important;
+}
+.downValue{
+	color: #C00000 !important;
+}
+.upValue::after{
+   font-family: FontAwesome;
+   content: " \f077";
+}
+.downValue::after{
+   font-family: FontAwesome;
+   content: " \f078";
 }

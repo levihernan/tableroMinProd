@@ -30,7 +30,7 @@ ultimosDatos = ultimosDatosArray[2*N-1]
 ultimosDatos_var = dataset[2*N].slice(-12);
 
 for (row = 0; row < 12; row++) {
-  if (ultimosDatos_var[row] > 0){
+  if (ultimosDatos_var[row] > 0 || ultimosDatos_var[row] < 0 ){
     hayDatosVar = true;
   }
 };

@@ -138,14 +138,14 @@ function draw(dataTablero, tabletop) {
   $('#inversion #unidad1').html('Millones de USD');
   $('#inversion #unidad5').html('Anual');
   $('#inversion tr:nth-child(3) td#unidad1 ').html('Variación anual [%]');
-  $('#inversion tr:nth-child(4) td#unidad1 ').html('Índice (Ene-2015 = 100)');
+  $('#inversion tr:nth-child(4) td#unidad1 ').html('Índice (Ene&#8209;2015=100)');
   $('#inversion tr:nth-child(5) td#unidad1 ').html('Millones de USD de 2004');
   for(var i = 7;i<13;i++){
     $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Millones de USD');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
   $('#collapsed-table tr:nth-child(9) td#unidad1').html('Variación anual [%]');
-  $('#collapsed-table tr:nth-child(10) td#unidad1').html('Índice Ene-2015=100');
+  $('#collapsed-table tr:nth-child(10) td#unidad1').html('Índice Ene&#8209;2015=100');
   $('#collapsed-table tr:nth-child(11) td#unidad1').html('Millones de USD de 2004');
 
   /*-----------------------Consumo-------------------*/
@@ -163,13 +163,13 @@ function draw(dataTablero, tabletop) {
   $('#collapsed-table tr:nth-child(17) td#unidad1').html('Tasa [%]');
 
   /*-----------------------Precios-------------------*/
-  $('#precios #unidad1').html('Índice (Ene-2001 = 1)');
+  $('#precios #unidad1').html('Índice (Ene&#8209;2001=1)');
   $('#precios tr:nth-child(1) td#unidad1 ').html('Pesos');
   $('#precios tr:nth-child(2) td#unidad1 ').html('Variación mensual [%]');
   $('#precios tr:nth-child(3) td#unidad1 ').html('$/USD');
   $('#precios #unidad5').html('Anual');
   for(var i = 18;i<24;i++){
-    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Índice (Ene-2001 = 1)');
+    $('#collapsed-table tr:nth-child('+i+') #unidad1').html('Índice (Ene&#8209;2001=1)');
     $('#collapsed-table tr:nth-child('+i+') #unidad5').html('Anual');
   }
   $('#collapsed-table tr:nth-child(18) td#unidad1').html('Pesos');
@@ -223,6 +223,7 @@ function draw(dataTablero, tabletop) {
   $('#collapsedTableroContainer #collapsed-table td.number2').before('<td class="udd">Último dato disponible</td>')
   $('#collapsedTableroContainer #collapsed-table td.number5').before('<td class="acumulado">Acumulado</td>')
 
+  flechitas();
 }
 
 $(document).on('click touch', '#collapsed-table tr',function() {

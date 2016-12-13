@@ -10,7 +10,9 @@ function drawCharts(N){
       Highcharts.setOptions({
         lang: {
           months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',  'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-          shortMonths: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',  'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+          shortMonths: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',  'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+          decimalPoint: ',',
+          thousandsSep: '.'
         }
       })
         // split the data set into ohlc and volume
@@ -65,8 +67,9 @@ function drawCharts(N){
                       },
         						credits: {
                       enabled: true,
-                      text: dataset[2*N-1][3],  //PONER FUENTE
+                      text: "Fuente: " + dataset[2*N-1][3],  //PONER FUENTE
                       href: '',
+                      style: { "cursor": "default", "color": "#999999", "fontSize": "12px" }
                     },
                     title: {
                         text: dataset[2*N-1][4] //PONER TITULO
@@ -124,8 +127,9 @@ function drawCharts(N){
               },
 						credits: {
               enabled: true,
-              text: dataset[2*N-1][3],  //PONER FUETE
+              text: "Fuente: " + dataset[2*N-1][3],  //PONER FUENTE
               href: '',
+              style: { "cursor": "default", "color": "#999999", "fontSize": "12px" }
             },
             title: {
                 text: dataset[2*N-1][4] //PONER TITULO
@@ -147,7 +151,8 @@ function drawCharts(N){
               opposite: false,
               labels: {
                   align: 'left',
-                  x: 2
+                  x: 2,
+                  enabled: false
               },
               title: {
                   text: 'Variación anual' //CAMBIA?
