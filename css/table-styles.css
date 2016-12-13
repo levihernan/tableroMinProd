@@ -231,3 +231,17 @@ td.number3, td.number4, td.number6, td.number7{
    font-family: FontAwesome;
    content: " \f078";
 }
+.rojo{
+	color: #C00000 !important;
+}
+.verde{
+	color: #00B050 !important;
+}
+
+/*EXCEPCION DE FLECHITAS
+#monetario td::after, #fiscal td::after{
+	content:"" !important;
+}
+#monetario td, #fiscal td{
+	color: #58595B !important;
+}*/
