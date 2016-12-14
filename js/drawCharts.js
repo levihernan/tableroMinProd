@@ -137,7 +137,11 @@ function drawCharts(N){
               enabled: true,
               text: "Fuente: " + dataset[2*N-1][3],  //PONER FUENTE
               href: '',
-              style: { "cursor": "default", "color": "#999999", "fontSize": "12px" }
+              style: { "cursor": "default", "color": "#999999", "fontSize": "12px" },
+              position: {
+                   align: 'left',
+                   x: 10
+               }
             },
             title: {
                 text: dataset[2*N-1][4] //PONER TITULO
