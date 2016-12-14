@@ -73,7 +73,8 @@
 	text-transform: uppercase;
 }
 #header{
-	perspective: 1000px;
+	//perspective: 1000px;
+	z-index: 10;
 }
 #tableroFloatingHeader thead td{
 	font-family: Roboto;
@@ -89,11 +90,19 @@
 		opacity: 0;
     /* transform: rotateX(90deg); */
     transition: box-shadow ease 0.2s;
-    margin-top: -5px;
+    //margin-top: -5px;
     pointer-events: none;
-    width: Calc(80% + 110px);
+    //width: Calc(80% + 110px);
 		display: table !important;
     /* box-shadow: 0 0 40px -15px; */
+		position: fixed;
+		z-index: 9;
+		margin-top: 0;
+		top: 80px;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-left: -1px;
+		width: 80%;
 }
 .opacity1{
 		opacity: 1 !important;
