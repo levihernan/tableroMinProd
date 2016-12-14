@@ -74,7 +74,11 @@ function drawCharts(N){
                     title: {
                         text: dataset[2*N-1][4] //PONER TITULO
                     },
-
+                    plotOptions: {
+                        series: {
+                            connectNulls: true
+                        }
+                    },
                     yAxis: [{
                        lineWidth: 2,
                        opposite: false,
@@ -133,6 +137,11 @@ function drawCharts(N){
             },
             title: {
                 text: dataset[2*N-1][4] //PONER TITULO
+            },
+            plotOptions: {
+                series: {
+                    connectNulls: true
+                }
             },
 
             yAxis: [{
