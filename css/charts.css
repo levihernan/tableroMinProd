@@ -170,3 +170,8 @@ h1, h2, tspan, text, a {
     margin: 0;
     padding: 15px 70px;
 }
+.aclaraciones {
+  margin-bottom: 30px;
+  font-size: 12px;
+  color: #585858
+}
