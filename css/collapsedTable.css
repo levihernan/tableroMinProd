@@ -5,10 +5,11 @@
   height: 30px;
   line-height: 30px;
 	border-radius: 4px;
-	//background: linear-gradient(to top, #C5E9F3, #C5E9F3);
-	background: #C5E9F3;
+	background: linear-gradient(to left top, #2C98D6 50%, #2B9DE3 50%);
+	//background: #C5E9F3;
   font-weight: 500 !important;
 	cursor: pointer;
+	color: #fff
 }
 #collapsedTableroContainer tbody td{
 	border-radius: 3px;
