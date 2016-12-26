@@ -727,6 +727,7 @@ Main components
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+		padding-bottom: 15px;
   }
   .cd-primary-nav .cd-secondary-nav > li:nth-child(4n+2) {
     /* +2 because we have 2 list items with display:none */

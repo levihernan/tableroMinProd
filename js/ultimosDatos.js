@@ -37,8 +37,12 @@ for (row = 0; row < 12; row++) {
 
 
 //Set titulo + unidades
-$('#ultimosDatosSubtitle').html("Últimos datos "+dataset[2*N-1][4]); //CHART TITLE
+// $('#ultimosDatosSubtitle').html("Últimos datos "+dataset[2*N-1][4]); //CHART TITLE
+$('#ultimosDatosSubtitle').html("Últimos datos"); //CHART TITLE
 $('#ultimosDatosUnidades').html(dataset[2*N-1][0]); //YAXIS
+
+$('#ultimosDatosDescription').html(dataset[2*N-1][2]); //YAXIS
+
 
 rowTitulos = "<tr><td>Período</td>";
 //AGREGAR IF
