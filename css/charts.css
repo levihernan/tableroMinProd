@@ -116,7 +116,7 @@ h1, h2, tspan, text, a {
   //text-align: left;
 }
 #ultimosDatosUnidades{
-  text-align: left;
+  //text-align: left;
   font-size: 14px;
   margin-bottom: 20px;
 }
@@ -188,6 +188,9 @@ h1, h2, tspan, text, a {
   cursor:pointer;
   line-height:20px
 }
+#ultimaActualizacion{
+  font-weight: bold;
+}
 @page {
   size: A4;
 }
@@ -200,9 +203,5 @@ h1, h2, tspan, text, a {
   }
   .printButton{
     display: none;
-  }
-  .tituloTablero h1{
-    font-size: 30px;
-    color: #0089c7 
   }
 }

@@ -1,12 +1,12 @@
 var htmlprint = function(){
-	
+
 	if($('#seriesContainer').css('display') !== 'block'){
 
-		html2canvas($(".spreadedTablero"), {
+		html2canvas($("#tableroContainer"), {
 			onrendered: function(canvas) {
 				var myImage = canvas.toDataURL("image/png");
 				var tWindow = window.open("");
-				$(tWindow.document.body).html("<img id='Image' src=" + myImage + " style='width:100%;'></img>").ready(function() {
+				$(tWindow.document.body).html("<div style='text-align:center'><img id='Image' src=" + myImage + " style='width:70%;'></img></div>").ready(function() {
 					tWindow.focus();
 					tWindow.print();
 				});
@@ -14,13 +14,6 @@ var htmlprint = function(){
 		});
 
 	}else{
-
 		window.print();
-
-
-
 	}
-
-
-
 }

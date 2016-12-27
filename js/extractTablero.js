@@ -114,6 +114,9 @@ function draw(dataTablero, tabletop) {
   selection = d3.select('#fiscal');
   tabulate(dataFiscal, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
 
+  ultimaActualizacion = dataTablero.slice(40,41);
+  $('#ultimaActualizacion').html('Fecha última actualización: ' + ultimaActualizacion[0].periodo);
+
   /*-----Data para tablero comprimido ----------------*/
   dataTotal = dataTablero.slice(0,40);
   selection = d3.select('#collapsedTableroContainer');
