@@ -181,6 +181,28 @@ h1, h2, tspan, text, a {
   color: #585858;
   text-align: left;
 }
+.printButton{
+  float: right;
+  font-size: 24px;
+  margin-right: -40px;
+  cursor:pointer;
+  line-height:20px
+}
 @page {
   size: A4;
+}
+@media print {
+  #ultimosDatosUnidades{
+    text-align: center;
+  }
+  .cd-nav{
+    display: none;
+  }
+  .printButton{
+    display: none;
+  }
+  .tituloTablero h1{
+    font-size: 30px;
+    color: #0089c7 
+  }
 }
