@@ -30,6 +30,9 @@
 	<script type="text/javascript" src="js/jquery.mobile.custom.js"></script>
 	<script type="text/javascript" src="js/extractTablero.js"></script>
 	<script type="text/javascript" src="js/showFloatingHeader.js"></script>
+	<script type="text/javascript" src="js/html2canvas.js"></script>
+	<script type="text/javascript" src="js/html2canvas.svg.js"></script>
+	<script type="text/javascript" src="js/htmlprint.js"></script>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -75,7 +78,9 @@
 
 <main class="cd-main-content">
 	<div class="tituloTablero">
-		<h1>Tablero de la Economía Real</h1>
+		<h1>Tablero de la Economía Real
+		<i style="float: right;font-size: 25px;margin-right: -40px;cursor:pointer" class="fa fa-print" aria-hidden="true" onclick="htmlprint()"></i>
+		</h1>
 	</div>
 
 		<!-- your content here -->
@@ -120,16 +125,16 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr><td class="subtitulo" colspan="8">Sector externo</td></tr>
-							<tr><td id="sectorExterno" class="innerTable" colspan="8"></td></tr>
+							<tr><td class="subtitulo" colspan="8">Sector real</td></tr>
+							<tr><td id="sectorReal" class="innerTable" colspan="8"></td></tr>
 							<tr><td class="subtitulo"  colspan="8">Inversión</td></tr>
 							<tr><td id="inversion" class="innerTable" colspan="8"></td></tr>
 							<tr><td class="subtitulo" colspan="8">Consumo</td></tr>
 							<tr><td id="consumo" class="innerTable" colspan="8"></td></tr>
+							<tr><td class="subtitulo" colspan="8">Sector externo</td></tr>
+							<tr><td id="sectorExterno" class="innerTable" colspan="8"></td></tr>
 							<tr><td class="subtitulo"  colspan="8">Precios</td></tr>
 							<tr><td id="precios" class="innerTable" colspan="8"></td></tr>
-							<tr><td class="subtitulo"  colspan="8">Sector real</td></tr>
-							<tr><td id="sectorReal" class="innerTable" colspan="8"></td></tr>
 							<tr><td class="subtitulo"  colspan="8">Monetario</td></tr>
 							<tr><td id="monetario" class="innerTable" colspan="8"></td></tr>
 							<tr><td class="subtitulo"  colspan="8">Fiscal</td></tr>
