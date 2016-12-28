@@ -89,38 +89,52 @@ function draw(dataTablero, tabletop) {
   dataSectorExt = dataTablero.slice(0,6);
   selection = d3.select('#sectorExterno');
   tabulate(dataSectorExt, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
+  selection = d3.select('#externoMobile');
+  tabulate(dataSectorExt, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
   dataInversion = dataTablero.slice(6,12);
   selection = d3.select('#inversion');
   tabulate(dataInversion, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
+  selection = d3.select('#inversionMobile');
+  tabulate(dataInversion, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
   dataConsumo = dataTablero.slice(12,17);
   selection = d3.select('#consumo');
   tabulate(dataConsumo, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
+  selection = d3.select('#consumoMobile');
+  tabulate(dataConsumo, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
   dataPrecios = dataTablero.slice(17,23);
   selection = d3.select('#precios');
   tabulate(dataPrecios, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
+  selection = d3.select('#preciosMobile');
+  tabulate(dataPrecios, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
   dataSectorReal = dataTablero.slice(23,33);
   selection = d3.select('#sectorReal');
   tabulate(dataSectorReal,  selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
+  selection = d3.select('#realMobile');
+  tabulate(dataSectorReal, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
   dataMonetario = dataTablero.slice(33,36);
   selection = d3.select('#monetario');
   tabulate(dataMonetario,  selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
+  selection = d3.select('#monetarioMobile');
+  tabulate(dataMonetario, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
   dataFiscal = dataTablero.slice(36,40);
   selection = d3.select('#fiscal');
   tabulate(dataFiscal, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],true); // 2 column table
+  selection = d3.select('#fiscalMobile');
+  tabulate(dataFiscal, selection, ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
   ultimaActualizacion = dataTablero.slice(40,41);
   $('#ultimaActualizacion').html('Fecha última actualización: ' + ultimaActualizacion[0].periodo);
 
   /*-----Data para tablero comprimido ----------------*/
-  dataTotal = dataTablero.slice(0,40);
-  selection = d3.select('#collapsedTableroContainer');
-  tabulate(dataTotal, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
+  // dataTotal = dataTablero.slice(0,40);
+  // selection = d3.select('#collapsedTableroContainer');
+  // tabulate(dataTotal, selection,  ['indicador', 'unidad','periodo', 'valor','variacion_ia', 'periodo2','val_2016','var_16_15'],false); // 2 column table
 
   /*-----------------------Sector externo-------------------*/
   $('#sectorExterno #unidad1').html('Millones de USD');
